@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html data-page-node-id="HKNcadHWKchml22lnJJ1IA" lang="zh-CN"><head data-page-node-id="ZzWg8UnRlIbqus8ACePFLO">
-<meta data-page-node-id="q2Aka5c28R9knM3UgJpg2o" charset="UTF-8"><meta data-page-node-id="vLFifntPC6bIfOSrn4C3fK" name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-page-node-id="I2vpUM4LFIYstY4lHeBaqC" data-pnid-children="K7MLpL5BPE3NmSquD4w3vr">作业二 | 亿航 EH216-S 无人驾驶载人航空器系统安全分析 | 飞行汽车技术基础</title>
-<meta data-page-node-id="RDIJh9khyZiQWQCFkFuKkU" name="description" content="以亿航 EH216-S 为对象，基于 ConOps、SORA 特定运行风险评估、符合性方法与运行体系分析展开的安全分析。">
-<style data-page-node-id="ok3elwgBG73liKEUs3Sbs5" data-pnid-children="7QGbBoy69ERBBtB2zKmSYz">
+<html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作业二 | 亿航 EH216-S 无人驾驶载人航空器系统安全分析 | 飞行汽车技术基础</title>
+<meta name="description" content="以亿航 EH216-S 为对象，基于 ConOps、SORA 特定运行风险评估、符合性方法与运行体系分析展开的安全分析。">
+<style>
 :root{
   --bg:#eef5fb; --paper:#fbfdff; --ink:#0d3a63; --ink2:#1b5583; --ink3:#5b81a6;
   --line:#9dbcd8; --line2:#cfe0ef; --stamp:#b0462a; --ok:#0e7566;
@@ -109,244 +109,259 @@ footer h5{font:700 11px var(--mono);letter-spacing:.14em;color:var(--ink2);margi
   h1{font-size:29px}h2{font-size:21px}.sheet{padding:18px 15px 22px}
 }
 </style>
-</head><body data-page-node-id="XQqkWD0JDaxO8nVMcaZmwR">
-<div data-page-node-id="aTRtTgorgpYQX6PQKe8sHp" class="layout"><nav data-page-node-id="ytqGddsf0vP7M8mQFpQyhH" class="rail"><div data-page-node-id="yn2pj7M4axRRQMyG37u8MH" class="rl-t">DWG 02 / 图幅索引</div><a data-page-node-id="zJ9K56wCMenCz3knSJ5WF8" href="#s0" title="标题栏">00</a><a data-page-node-id="RMAxtcii4yCOsl96z9sFhv" href="#s1" title="责任边界">01</a><a data-page-node-id="gWczwpCAtWTHbDWO5mdNYn" href="#s2" title="SORA 评估">02</a><a data-page-node-id="vU9jiGU9pw373y4LrHegtN" href="#s3" title="符合性验证">03</a><a data-page-node-id="PN1wfAyZ7VXM1fJFzWFin3" href="#s4" title="系统兜底">04</a><a data-page-node-id="Ge6wpRObwWA9OotvE5qppS" href="#s5" title="链路与地面站">05</a><a data-page-node-id="C9PD91XJ3hATqkf7gG4e2J" href="#s6" title="第三方风险">06</a><a data-page-node-id="1Zh2B3SUB8yISmJNYIteqW" href="#s7" title="结论">07</a><div data-page-node-id="c2wocMDpXsYqpsT1C1GmFR" class="rl-b">SHEET INDEX · 01–08</div></nav><main data-page-node-id="EbLs8YelDOSTg5OqBzJbbh"><div data-page-node-id="iYGCpgREcX8FZZwAVvAwmK" class="titleblock">
-  <div data-page-node-id="E1NWI6WziWCAmxPoVuLSE7" class="tb main"><small data-page-node-id="3UUKBCipT4qCDzAWWxUTBV">DRAWING TITLE / 图名</small><b data-page-node-id="rvVTM6IxfiyVVMB75MMcKL">无人驾驶载人航空器系统 EH216-S<br data-page-node-id="6sfXTDKtSodbZmLPfhqSm5">运行安全分析</b></div>
-  <div data-page-node-id="cGYY6VU1TejkeOAAf7KqzU" class="tb"><small data-page-node-id="ImaaA0cIZkUEYWy3CiAeto">DWG NO. / 图号</small><b data-page-node-id="4EATD3oN3cTabCohGm9Cc1">JLU-UAM-02</b></div>
-  <div data-page-node-id="Zv6NcuJ6RrfR3eehIsffYJ" class="tb"><small data-page-node-id="hYFkDitHL9gQiTNOLgOC7A">SCALE / 比例</small><b data-page-node-id="BxzH39VwG8bxDTtLHKMKa4">1:20 / 示意</b></div>
-  <div data-page-node-id="5v0zyoGg14MtPB7nTICVcL" class="tb"><small data-page-node-id="hZybpDWD0gCUYEGMpWEHuC">SUBJECT / 课程</small><b data-page-node-id="zEwjVhD7WLYgApzckUnost">飞行汽车技术基础</b></div>
-  <div data-page-node-id="imLLO3FaaHzuZ1xXrDwK2B" class="tb"><small data-page-node-id="1SMovGCvE5HmnZC2Z3CCfB">REV / 修订</small><b data-page-node-id="mw9SEOkNb7gsmUgnamLhh3">A · 2026.11</b></div>
-</div><section data-page-node-id="2KGW9eaMaAGQjIGCuNx2Lk" class="sheet" id="s0">
-  <div data-page-node-id="HDst43RGeWTOH5CEmnoAXd" class="sh"><div data-page-node-id="I6WgcfrmVg14G6QFTWlsqr"><div data-page-node-id="bh8xnp9C6X4DBGUIsi4LOn" class="no">SHEET 00 / INDEX / 标题栏</div><h2 data-page-node-id="5wb37cMkMXAFxoW7HRjks1">把驾驶员拿掉之后，安全去了哪里</h2></div><div data-page-node-id="kQHMUrsv00CASYrnlMpPk1" class="tg">INDEX / 标题栏</div></div>
+</head><body>
+<div class="layout"><nav class="rail"><div class="rl-t">DWG 02 / 图幅索引</div><a href="#s0" title="标题栏">00</a><a href="#s1" title="责任边界">01</a><a href="#s2" title="SORA 评估">02</a><a href="#s3" title="符合性验证">03</a><a href="#s4" title="系统兜底">04</a><a href="#s5" title="链路与地面站">05</a><a href="#s6" title="第三方风险">06</a><a href="#s7" title="结论">07</a><div class="rl-b">SHEET INDEX · 01–08</div></nav><main><div class="titleblock">
+  <div class="tb main"><small>DRAWING TITLE / 图名</small><b>无人驾驶载人航空器系统 EH216-S<br>运行安全分析</b></div>
+  <div class="tb"><small>DWG NO. / 图号</small><b>JLU-UAM-02</b></div>
+  <div class="tb"><small>SCALE / 比例</small><b>1:20 / 示意</b></div>
+  <div class="tb"><small>SUBJECT / 课程</small><b>飞行汽车技术基础</b></div>
+  <div class="tb"><small>REV / 修订</small><b>A · 2026.11</b></div>
+</div><section class="sheet" id="s0">
+  <div class="sh"><div><div class="no">SHEET 00 / INDEX / 标题栏</div><h2>把驾驶员拿掉之后，安全去了哪里</h2></div><div class="tg">INDEX / 标题栏</div></div>
   
-  <div data-page-node-id="4DTrwV3ABC23sk9UZFQAkv" class="sub">FUNDAMENTALS OF FLYING VEHICLE TECHNOLOGY · COURSEWORK 02 · DRAWING 00</div>
-  <h1 data-page-node-id="CmBpcaOE6ecWOZkJTNkU0f">安全不再只是产品属性，而是体系属性</h1>
-  <p data-page-node-id="GLO5PVbcGMJx7PqeA64hs1" class="lead">有人驾驶飞机有一道最后的、不在图纸上的冗余：驾驶员。EH216-S 把这道冗余拿掉了。于是「这架飞机安不安全」这个问题，变成了「这套运行体系能不能在没有人现场判断的情况下持续安全」。我这份分析不沿用失效概率分解的老路，改从运行概念、特定运行风险评估、符合性证据与体系兜底四条线拆。</p>
-  <div data-page-node-id="CfPrkhGVeFTm7DRJEA4Ac3" class="cols" style="margin-top:18px">
-    <div data-page-node-id="CxhQ6EzeIvoddhP0rAPO2J">
-      <div data-page-node-id="9aHERwFEkS8ivWFiGjf2jK" class="note"><span data-page-node-id="Wqlj01cFCtklOBjWdYND8N" class="lab">核心论点 / THESIS</span>TC 审的是设计，AC 审的是单机，PC 审的是生产，OC 审的是组织。四证齐全只说明「每一段都被审过」，不说明「风险被消除」——它只是从机上被搬到了链路、地面站、运营人和规章里。</div>
-      <p data-page-node-id="mDQfxHJ6vOxPhvksZNPQGj" style="margin-top:14px">因此本作业的分析对象是<b data-page-node-id="eavJzLR0FuBs5et8KTyJkE">大系统</b>：航空器 + C2 链路 + 地面指挥中心 + 运营人 + 空域 + 审定规章。任何只画飞机本身的故障分析，都会漏掉最要紧的那几层。</p>
+  <div class="sub">FUNDAMENTALS OF FLYING VEHICLE TECHNOLOGY · COURSEWORK 02 · DRAWING 00</div>
+  <h1>安全不再只是产品属性，而是体系属性</h1>
+  <p class="lead">有人驾驶飞机有一道最后的、不在图纸上的冗余：驾驶员。EH216-S 把这道冗余拿掉了。于是「这架飞机安不安全」这个问题，变成了「这套运行体系能不能在没有人现场判断的情况下持续安全」。我这份分析不沿用失效概率分解的老路，改从运行概念、特定运行风险评估、符合性证据与体系兜底四条线拆。</p>
+  <div class="cols" style="margin-top:18px">
+    <div>
+      <div class="note"><span class="lab">核心论点 / THESIS</span>TC 审的是设计，AC 审的是单机，PC 审的是生产，OC 审的是组织。四证齐全只说明「每一段都被审过」，不说明「风险被消除」——它只是从机上被搬到了链路、地面站、运营人和规章里。</div>
+      <p style="margin-top:14px">因此本作业的分析对象是<b>大系统</b>：航空器 + C2 链路 + 地面指挥中心 + 运营人 + 空域 + 审定规章。任何只画飞机本身的故障分析，都会漏掉最要紧的那几层。</p>
     </div>
-    <div data-page-node-id="Gyy3NjwG8k01GUHus7rLwe">
-      <div data-page-node-id="pEEBIu0A0p6rk0kNMbgFLZ" class="seals">
-        <div data-page-node-id="GGxamhH72FKfL5vgVxiuFV" class="seal">NAME<b data-page-node-id="WEYbmEkcFDoz4V0HH3EWzh">李振宁</b></div><div data-page-node-id="owh4yGrdH5Fk5LT2ZnjdAM" class="seal">STUDENT ID<b data-page-node-id="8YdIMC1yxUVA29VyjgPHD4">15231012</b></div>
-        <div data-page-node-id="TqWrZ9ZTa1Qqvl67Ql9Tsb" class="seal">MAJOR<b data-page-node-id="ctFsk13i8b8kUuFDq7px0y">工业设计 · 2023 级</b></div><div data-page-node-id="iudqb97RSnmyydsUHOULEo" class="seal">PILOT ONBOARD<b data-page-node-id="MQe28STvbdDTcr0HrXxdzs">NONE</b></div>
+    <div>
+      <div class="seals">
+        <div class="seal">NAME<b>李振宁</b></div><div class="seal">STUDENT ID<b>15231012</b></div>
+        <div class="seal">MAJOR<b>工业设计 · 2023 级</b></div><div class="seal">PILOT ONBOARD<b>NONE</b></div>
       </div>
-      <p data-page-node-id="GwNK5hIp4dFFJmw5MFwi3U" style="font-size:13px;color:var(--ink2);margin-top:12px">方法说明：本作业采用 ConOps（运行概念）、SORA（特定运行风险评估）、符合性方法 MC 与运行体系分析，与按 ARP4761 逐功能分解失效概率的路径不同。两者不是替代关系，而是看同一台机器的两个方向。</p>
-      <div data-page-node-id="zS9H0AT6RoCeT8NWfaEO6Q" class="stamp" style="margin-top:12px">体系即冗余</div>
+      <p style="font-size:13px;color:var(--ink2);margin-top:12px">方法说明：本作业采用 ConOps（运行概念）、SORA（特定运行风险评估）、符合性方法 MC 与运行体系分析，与按 ARP4761 逐功能分解失效概率的路径不同。两者不是替代关系，而是看同一台机器的两个方向。</p>
+      <div class="stamp" style="margin-top:12px">体系即冗余</div>
     </div>
   </div>
-  <div data-page-node-id="dC4v4DZd5BleNhfVbRBM3C" class="statgrid">
-    <div data-page-node-id="pWUcAeSxDCSBt5W0J0NPK9"><div data-page-node-id="TnWpsqLqPnXhtqHB03UHdx" class="n">0<small data-page-node-id="gpYYFWmQwOeZMlHSd7TRLc">名</small></div><div data-page-node-id="O6v43RrRsMa3LK5DNvvDZL" class="k">机上驾驶员</div></div>
-    <div data-page-node-id="mJIYfrclf8biJkQZo0K2nM"><div data-page-node-id="h7FlAQu0771GAGGMWhYtvw" class="n">4<small data-page-node-id="f8Af7DeftJdnGSjolNO8Re">证</small></div><div data-page-node-id="t7K6gLz9aFgtAyNpmJqYGR" class="k">TC / AC / PC / OC</div></div>
-    <div data-page-node-id="CSgw4U75iKVUpL0DJdByVG"><div data-page-node-id="sp7PrC5cNC6lBNBPQjtNLP" class="n">40 000<small data-page-node-id="gKmN4kG79X2aI1NyRkVi1p">+ 架次</small></div><div data-page-node-id="8Mk9qJG1Ix3BpFOi943jKO" class="k">审定阶段飞行（官方披露）</div></div>
-    <div data-page-node-id="ukrvgLzCuURYgEdHbQ5d1H"><div data-page-node-id="dnwlafxxZ5ReTIZubshwQP" class="n">25<small data-page-node-id="uQdkPPAMgAD1LZi0YcaSSb">min</small></div><div data-page-node-id="HI0jnIehH1VDJBSls2i57G" class="k">续航决定的处置时间预算</div></div>
+  <div class="statgrid">
+    <div><div class="n">0<small>名</small></div><div class="k">机上驾驶员</div></div>
+    <div><div class="n">4<small>证</small></div><div class="k">TC / AC / PC / OC</div></div>
+    <div><div class="n">40 000<small>+ 架次</small></div><div class="k">审定阶段飞行（官方披露）</div></div>
+    <div><div class="n">25<small>min</small></div><div class="k">续航决定的处置时间预算</div></div>
   </div>
 
-</section><section data-page-node-id="3Bir9ACyWVTH67M55Fm4kg" class="sheet" id="s1">
-  <div data-page-node-id="9CPFp0GmB92hF3PWnWGmfh" class="sh"><div data-page-node-id="ofJIOdg0aUvp9ADE6IHM2v"><div data-page-node-id="ztAprntRYQCz0Almkh9NBr" class="no">SHEET 01 / CONOPS / 运行概念</div><h2 data-page-node-id="DZRWGpRH3fqjKXFgiBFEZz">先划责任边界：谁在回路里</h2></div><div data-page-node-id="RQGXn4damZbLcKJgA0dA0m" class="tg">CONOPS / 运行概念</div></div>
+</section><section class="sheet" id="s1">
+  <div class="sh"><div><div class="no">SHEET 01 / CONOPS / 运行概念</div><h2>先划责任边界：谁在回路里</h2></div><div class="tg">CONOPS / 运行概念</div></div>
   
-  <div data-page-node-id="uzxyjOPZUStoo7zdrvv20a" class="fig"><svg data-page-node-id="tecsSdVnE9F8xiEerixeVo" viewBox="0 0 880 280" role="img" aria-label="运行体系安全架构：飞行器、链路、地面站、运营人、局方"><rect data-page-node-id="8OUm2dttAJm2sQFs6ASkU3" x="30" y="30" width="820" height="52" fill="#fff" stroke="#0d3a63" stroke-width="1.6"></rect><text data-page-node-id="1Ep5yFYyEP5LDgI0AEyGEu" x="42" y="50" font-family="ui-monospace,monospace" font-size="9" fill="#5b81a6" letter-spacing="1">AIRCRAFT / 飞行器</text><text data-page-node-id="UODUbmSufeHxdq4M9vLyLP" x="42" y="70" font-size="12" fill="#0d3a63">8 轴 16 旋翼 · 全备份飞控表决 · 电池 · fail-safe 自主决策</text><rect data-page-node-id="IG08GYkXQQTOn0oOwsmGA3" x="30" y="100" width="820" height="52" fill="#fff" stroke="#0d3a63" stroke-width="1.6"></rect><text data-page-node-id="yY20O5wnwMoLRd3tSLPodh" x="42" y="120" font-family="ui-monospace,monospace" font-size="9" fill="#5b81a6" letter-spacing="1">C2 LINK / 通信链路</text><text data-page-node-id="xmre9nwT8JCRE2i2PEa2Qr" x="42" y="140" font-size="12" fill="#0d3a63">加密通信 · 独立密钥 · GNSS / 惯导 · 失联自主处置</text><rect data-page-node-id="Uz9J5v0fVl9UF9uzrxfJAb" x="30" y="170" width="390" height="52" fill="#fff" stroke="#0d3a63" stroke-width="1.6"></rect><text data-page-node-id="VAGrGDKflB0rGdsFURXYoW" x="42" y="190" font-family="ui-monospace,monospace" font-size="9" fill="#5b81a6" letter-spacing="1">GROUND STATION</text><text data-page-node-id="xD9V2psFnGFwCAgNeBfHlZ" x="42" y="210" font-size="12" fill="#0d3a63">机队监控 · 调度 · 告警 · 应急干预</text><rect data-page-node-id="pFYuoSKYEWuxNfRlbnUl4d" x="440" y="170" width="410" height="52" fill="#fff" stroke="#0d3a63" stroke-width="1.6"></rect><text data-page-node-id="gMMj5eQ3G9Eka6ASqpZAhp" x="452" y="190" font-family="ui-monospace,monospace" font-size="9" fill="#5b81a6" letter-spacing="1">OPERATOR / 运营人</text><text data-page-node-id="H4qdsUpRJgGVUgDxiGVrFX" x="452" y="210" font-size="12" fill="#0d3a63">OC 资质 · 组织制度 · 人员训练 · 维护体系</text><line data-page-node-id="DdBFG2k62vY1wufPvWhz92" x1="440" y1="82" x2="440" y2="100" stroke="#b0462a" stroke-width="1.6"></line><line data-page-node-id="n4j8PMk43hKFUCRdgwT1CR" x1="225" y1="152" x2="225" y2="170" stroke="#b0462a" stroke-width="1.6"></line><line data-page-node-id="bifAfQZqszvtY6M4G4DX9s" x1="645" y1="152" x2="645" y2="170" stroke="#b0462a" stroke-width="1.6"></line><rect data-page-node-id="kqkfRkWUbtHOUuxCBPeGEU" x="30" y="238" width="820" height="30" fill="none" stroke="#b0462a" stroke-width="1.2" stroke-dasharray="5 4"></rect><text data-page-node-id="jhI3Avi7CCMH72vNDxdGBk" x="440" y="258" font-family="ui-monospace,monospace" font-size="10" fill="#b0462a" text-anchor="middle">CAAC / 专用条件 · 空域 · 运行规章 —— 安全边界由体系定义，而非单件产品定义</text></svg><figcaption data-page-node-id="CpebeFKQNedHQq9GGLILra"><span data-page-node-id="3wG0xlI677qzn0Mvu2jmkN">图 01-1 · 运行体系安全架构</span><span data-page-node-id="07l1MD9Dh9QHQcI4HCSXI2">四层 + 规章边界</span></figcaption></div>
-  <div data-page-node-id="I5oLucpKXhdNpBTAqcmukH" class="cols" style="margin-top:18px">
-    <div data-page-node-id="iEbLJWQpHC6zoYA8KcYQZh">
-      <h3 data-page-node-id="71bvpJtir56JyScCZI6GNL"><span data-page-node-id="S6dBxv4WTIHD5aQa3xf0sf" class="idx">01.1</span>「远程接管」不是「远程驾驶」</h3>
-      <p data-page-node-id="PAfb96HJ2FupqHGua6N8Cf">公开资料写的是：指挥控制中心集成监控、调度、预警，与航空器实时数据交换，并在应急时干预。这里的关键词是<b data-page-node-id="h35vOVeE5Au1xF8sRk2boE">监控与干预</b>，不是实时杆操纵。地面操作员不具备飞行员那种连续的、手眼闭环的操纵能力。</p>
-      <p data-page-node-id="5GCKqQqr737pEke9IChwU4">这个措辞差别决定了整套安全论证：不能再假设「人会在最后一刻把飞机拉回来」。所有关键决策必须在机上自主完成，地面侧只提供监控、调度与有限干预。</p>
+  <div class="fig"><svg viewBox="0 0 880 280" role="img" aria-label="运行体系安全架构：飞行器、链路、地面站、运营人、局方"><rect x="30" y="30" width="820" height="52" fill="#fff" stroke="#0d3a63" stroke-width="1.6"/><text x="42" y="50" font-family="ui-monospace,monospace" font-size="9" fill="#5b81a6" letter-spacing="1">AIRCRAFT / 飞行器</text><text x="42" y="70" font-size="12" fill="#0d3a63">8 轴 16 旋翼 · 全备份飞控表决 · 电池 · fail-safe 自主决策</text><rect x="30" y="100" width="820" height="52" fill="#fff" stroke="#0d3a63" stroke-width="1.6"/><text x="42" y="120" font-family="ui-monospace,monospace" font-size="9" fill="#5b81a6" letter-spacing="1">C2 LINK / 通信链路</text><text x="42" y="140" font-size="12" fill="#0d3a63">加密通信 · 独立密钥 · GNSS / 惯导 · 失联自主处置</text><rect x="30" y="170" width="390" height="52" fill="#fff" stroke="#0d3a63" stroke-width="1.6"/><text x="42" y="190" font-family="ui-monospace,monospace" font-size="9" fill="#5b81a6" letter-spacing="1">GROUND STATION</text><text x="42" y="210" font-size="12" fill="#0d3a63">机队监控 · 调度 · 告警 · 应急干预</text><rect x="440" y="170" width="410" height="52" fill="#fff" stroke="#0d3a63" stroke-width="1.6"/><text x="452" y="190" font-family="ui-monospace,monospace" font-size="9" fill="#5b81a6" letter-spacing="1">OPERATOR / 运营人</text><text x="452" y="210" font-size="12" fill="#0d3a63">OC 资质 · 组织制度 · 人员训练 · 维护体系</text><line x1="440" y1="82" x2="440" y2="100" stroke="#b0462a" stroke-width="1.6"/><line x1="225" y1="152" x2="225" y2="170" stroke="#b0462a" stroke-width="1.6"/><line x1="645" y1="152" x2="645" y2="170" stroke="#b0462a" stroke-width="1.6"/><rect x="30" y="238" width="820" height="30" fill="none" stroke="#b0462a" stroke-width="1.2" stroke-dasharray="5 4"/><text x="440" y="258" font-family="ui-monospace,monospace" font-size="10" fill="#b0462a" text-anchor="middle">CAAC / 专用条件 · 空域 · 运行规章 —— 安全边界由体系定义，而非单件产品定义</text></svg><figcaption><span>图 01-1 · 运行体系安全架构</span><span>四层 + 规章边界</span></figcaption></div>
+  <div class="cols" style="margin-top:18px">
+    <div>
+      <h3><span class="idx">01.1</span>「远程接管」不是「远程驾驶」</h3>
+      <p>公开资料写的是：指挥控制中心集成监控、调度、预警，与航空器实时数据交换，并在应急时干预。这里的关键词是<b>监控与干预</b>，不是实时杆操纵。地面操作员不具备飞行员那种连续的、手眼闭环的操纵能力。</p>
+      <p>这个措辞差别决定了整套安全论证：不能再假设「人会在最后一刻把飞机拉回来」。所有关键决策必须在机上自主完成，地面侧只提供监控、调度与有限干预。</p>
     </div>
-    <div data-page-node-id="PTiqtAaalhThhDkdAF4mPS">
-      <table data-page-node-id="VofnvV5xRmkv2negH4aZvW">
-        <caption data-page-node-id="0P6Fh4sXrCxzA9POSEa3EI">表 01-1 · 安全责任矩阵（作者整理）</caption>
-        <thead data-page-node-id="U40OUV0pquhKQQmDvlW9kO"><tr data-page-node-id="HmOKbiBEEDRUzCrW9H8XBI"><th data-page-node-id="Gn9dcKA6uXSsZUMVXNS4nd">功能</th><th data-page-node-id="sgxhZgq96mEolwKdGySo1o">机上</th><th data-page-node-id="1t9285GHCCRKVcLwt8ETth">地面 / 运营人</th><th data-page-node-id="2DqvRWkq5NAEY9zC4sEQdZ">局方</th></tr></thead>
-        <tbody data-page-node-id="C5BnaT1UmkGQT2zzGmNwFj">
-          <tr data-page-node-id="0iyj5swvHi7G1FuLbqoFgX"><td data-page-node-id="uzHBVWCHUWPcIGcPdNk7Ej"><b data-page-node-id="gvqROzEs5TIkN810VBANGr">稳定与导航</b></td><td data-page-node-id="oJaw37BE7wqqjjfXYpX4MH">飞控自主</td><td data-page-node-id="XH4S10AU4a4Ygk8XrCrUj0">监控</td><td data-page-node-id="u1DXbsZSb4dIAFUtrf13tb">审定</td></tr>
-          <tr data-page-node-id="ZxZobstXmfCwH5vAw4u9UI"><td data-page-node-id="3ZVDCIQvIBI3eEfcuH9FRz"><b data-page-node-id="mX1GTiNddP77onp7eowvnZ">航线与放行</b></td><td data-page-node-id="dwDK1RZIQUiK7qlDiGEc4q">执行预置</td><td data-page-node-id="kKmoxvSARAFH9QY4Ffz6xQ">申请 / 放行</td><td data-page-node-id="KYNppJ7vkNxqAT2b1REvHv">批准空域</td></tr>
-          <tr data-page-node-id="q5JotIiKX0AcPX0xIs99HX"><td data-page-node-id="SVRGakUsBxl9zVeoU8eHf0"><b data-page-node-id="S8zMKxGoZPN7ovBwvVyJ0c">失效检测</b></td><td data-page-node-id="BcKA2pVvBXlX7riXDnCHFC">表决 + 自检</td><td data-page-node-id="m1fGQ2d84coAxk96QQDuGL">告警复核</td><td data-page-node-id="BQE1tnhGghTOvG6lmXlNNL">符合性要求</td></tr>
-          <tr data-page-node-id="wsahG2LpXLSibA4jGaGH6A"><td data-page-node-id="oPd2ph2daGZ17Y7qkCORTl"><b data-page-node-id="kB7IVdhH5CPZmWTqHsIGRR">应急决策</b></td><td data-page-node-id="hEwTZsQRkw4eqGOWba39QP"><b data-page-node-id="V0HoIk6HaGcYvk6aRgrfRs">自主迫降</b></td><td data-page-node-id="RSSBsAJRhMeKG05z0ITXDn">干预 / 通报</td><td data-page-node-id="ry5FkPOHmECmwYEoPyR81E">运行规范</td></tr>
-          <tr data-page-node-id="xSMBx1a1raxCZIrVrGUiuL"><td data-page-node-id="ssd80zvIGF3FxMO6Wgqm3f"><b data-page-node-id="91TBX60rC6dKGCi0AQDFu4">乘客疏散</b></td><td data-page-node-id="uij7klBvb8y5aNVLEZgvjA">图示自解释</td><td data-page-node-id="HzSPDUHaYzhIykE0ufZill">地面人员</td><td data-page-node-id="wZRnx0ASPBmK6a73iT8uyr">应急程序审查</td></tr>
-          <tr data-page-node-id="KPEPDAhej2i4XviVs9nJFs"><td data-page-node-id="BHyB4owMpIWpiOn8GWNANu"><b data-page-node-id="Wi9FYZcr7d7tIdPhBk9EmT">持续安全</b></td><td data-page-node-id="p2ZnXMPZAaB7NacCvZZadv">数据记录</td><td data-page-node-id="hnrUcFQb4AxjSKQxlAcGYC">事件上报 / 维护</td><td data-page-node-id="AnJmfGoa9D9umFogs5JZO8">监督</td></tr>
+    <div>
+      <table>
+        <caption>表 01-1 · 安全责任矩阵（作者整理）</caption>
+        <thead><tr><th>功能</th><th>机上</th><th>地面 / 运营人</th><th>局方</th></tr></thead>
+        <tbody>
+          <tr><td><b>稳定与导航</b></td><td>飞控自主</td><td>监控</td><td>审定</td></tr>
+          <tr><td><b>航线与放行</b></td><td>执行预置</td><td>申请 / 放行</td><td>批准空域</td></tr>
+          <tr><td><b>失效检测</b></td><td>表决 + 自检</td><td>告警复核</td><td>符合性要求</td></tr>
+          <tr><td><b>应急决策</b></td><td><b>自主迫降</b></td><td>干预 / 通报</td><td>运行规范</td></tr>
+          <tr><td><b>乘客疏散</b></td><td>图示自解释</td><td>地面人员</td><td>应急程序审查</td></tr>
+          <tr><td><b>持续安全</b></td><td>数据记录</td><td>事件上报 / 维护</td><td>监督</td></tr>
         </tbody>
       </table>
     </div>
   </div>
-  <div data-page-node-id="AWLPi8JPTQBC1KFAAtRdYW" class="note"><span data-page-node-id="yqQ1uRKuBuG9oq6hQ1FrFK" class="lab">作者判断</span>表里最值得盯的是「应急决策」那一行：决策主体在机上，但后果由地面运营人和公众承担。责任与能力不重合，正是这类系统最难写清楚的地方。</div>
+  <div class="note"><span class="lab">作者判断</span>表里最值得盯的是「应急决策」那一行：决策主体在机上，但后果由地面运营人和公众承担。责任与能力不重合，正是这类系统最难写清楚的地方。</div>
 
-</section><section data-page-node-id="yjtw2zI2l0nrsvsMjhIOI4" class="sheet" id="s2">
-  <div data-page-node-id="ZOhqfiIvIcrVCErwMTaL07" class="sh"><div data-page-node-id="EHPoI627L0wIWHBGTcF5SD"><div data-page-node-id="ZLSiV5mcIRN7PhqqEEUDxA" class="no">SHEET 02 / SORA / 特定运行风险评估</div><h2 data-page-node-id="iHNWcBoGckQSZgPFoscUAd">SORA：从运行场景反推安全措施</h2></div><div data-page-node-id="i4kSjqRonb1yTRuL86l2a8" class="tg">SORA / 特定运行风险评估</div></div>
+</section><section class="sheet" id="s2">
+  <div class="sh"><div><div class="no">SHEET 02 / SORA / 特定运行风险评估</div><h2>SORA：从运行场景反推安全措施</h2></div><div class="tg">SORA / 特定运行风险评估</div></div>
   
-  <div data-page-node-id="hD5JCnJwo2VEgkzqVe2XIC" class="cols">
-    <div data-page-node-id="DR8YKtD0OHEUXKBXDyKGN9">
-      <h3 data-page-node-id="3Fi34FSiy9bxRB9b4Ytroy"><span data-page-node-id="FszM6YUL7tSLuf6NMYznal" class="idx">02.1</span>为什么换一套方法</h3>
-      <p data-page-node-id="X56qSloYNwXUD817fiLQKh">按 ARP4761 那套，从功能失效状态出发、给定量概率目标，适合有人运输类飞机。但对无人驾驶载客，最迫切的问题不是「某个部件失效概率是多少」，而是<b data-page-node-id="3kfhqBg5Qj8w69Spmkg6RC">「这一次运行在什么环境里、对地面和空中的第三方造成什么风险」</b>。</p>
-      <p data-page-node-id="9FXwRJkifeBNleqLOAYz3H">SORA 的顺序正好反过来：先定义运行概念（ConOps），再评<b data-page-node-id="CEzlaAf79pRGY14Go4phhP">地面风险 GRC</b> 与<b data-page-node-id="ZuYjOaCB21wwYFqsMF4p27">空中风险 ARC</b>，经过缓解措施后确定 SAIL（特定运行保证与完整性等级），最后导出一组 <b data-page-node-id="4rIZHwOUu2njbQLd2zcQ3X">OSO（运行安全目标）</b>。</p>
-      <p data-page-node-id="tgGo6vdNWCeU8gUsFringg">对 EH216-S 来说，「预设航线 + 限定区域 + 起降点清空」本身就是最强的风险缓解措施，重要性不低于任何硬件冗余。</p>
-      <div data-page-node-id="s0Z6EEnLODH2nvuinE3DjB" class="note"><span data-page-node-id="dWXIIy4HpMvmVYu66OQ0GA" class="lab">说明</span>下面的面板是按 SORA 思路做的<b data-page-node-id="HA9pDmMfgpDqF0SO0JRJlM">教学化简化整理</b>，不是官方审定结论，也不代表该型号的实际运行批准范围。</div>
+  <div class="cols">
+    <div>
+      <h3><span class="idx">02.1</span>为什么换一套方法</h3>
+      <p>按 ARP4761 那套，从功能失效状态出发、给定量概率目标，适合有人运输类飞机。但对无人驾驶载客，最迫切的问题不是「某个部件失效概率是多少」，而是<b>「这一次运行在什么环境里、对地面和空中的第三方造成什么风险」</b>。</p>
+      <p>SORA 的顺序正好反过来：先定义运行概念（ConOps），再评<b>地面风险 GRC</b> 与<b>空中风险 ARC</b>，经过缓解措施后确定 SAIL（特定运行保证与完整性等级），最后导出一组 <b>OSO（运行安全目标）</b>。</p>
+      <p>对 EH216-S 来说，「预设航线 + 限定区域 + 起降点清空」本身就是最强的风险缓解措施，重要性不低于任何硬件冗余。</p>
+      <div class="note"><span class="lab">说明</span>下面的面板是按 SORA 思路做的<b>教学化简化整理</b>，不是官方审定结论，也不代表该型号的实际运行批准范围。</div>
     </div>
-    <div data-page-node-id="00E7hoSTxyIliAcWYXrCUe">
-      <h3 data-page-node-id="Jjy67PV0sRHAMmUNhAJMo3"><span data-page-node-id="QawsC3kHz51XeLz7KDsrVR" class="idx">02.2</span>场景 → 措施（可切换）</h3>
-      <div data-page-node-id="PL9UCLc5x0bMBDWMtUrM18" class="tabs" id="soraTabs">
-        <button data-page-node-id="9FEsJxkESHeCFeRgJprELp" class="on" data-k="tour">景区观光</button>
-        <button data-page-node-id="8VX3fQu1AQo3ae32qBRUET" data-k="police">警务 / 应急</button>
-        <button data-page-node-id="JSD7IYnIQNN7glY3iYbuDT" data-k="cargo">物资运输</button>
-        <button data-page-node-id="1NyjlJyvtJ11lkE2RziXqa" data-k="commute">城市通勤</button>
+    <div>
+      <h3><span class="idx">02.2</span>场景 → 措施（可切换）</h3>
+      <div class="tabs" id="soraTabs">
+        <button class="on" data-k="tour">景区观光</button>
+        <button data-k="police">警务 / 应急</button>
+        <button data-k="cargo">物资运输</button>
+        <button data-k="commute">城市通勤</button>
       </div>
-      <div data-page-node-id="BMhyMJ6nWjG1OMYbDY0mGM" class="tabpanel on" id="soraBox" style="min-height:230px"></div>
+      <div class="tabpanel on" id="soraBox" style="min-height:230px"></div>
     </div>
   </div>
-  <h3 data-page-node-id="oIno6w6BBJTkviNv5D0uQR"><span data-page-node-id="LMMKmQM6mX2xFcoQyL6sWW" class="idx">02.3</span>从场景对比里读出来的结论</h3>
-  <p data-page-node-id="xD1xq480B2pVfuOfIDd0QH">把四个场景并排看，风险等级并不主要由飞机决定，而由<b data-page-node-id="z0RVCKhXMNqCF8rhyF4FmA">地面人口密度</b>和<b data-page-node-id="ZQCkfUQ9FyS4hXsgKyCsfk">空域混合程度</b>决定。同一台 EH216-S，在景区水域上空和在城市建成区上方，几乎是两个不同的产品。这也是为什么「城市通勤」在 25 min / 30 km 的包线和高密度空域下，现阶段不成立——不是飞机不够好，是运行条件还没被建立。</p>
+  <h3><span class="idx">02.3</span>从场景对比里读出来的结论</h3>
+  <p>把四个场景并排看，风险等级并不主要由飞机决定，而由<b>地面人口密度</b>和<b>空域混合程度</b>决定。同一台 EH216-S，在景区水域上空和在城市建成区上方，几乎是两个不同的产品。这也是为什么「城市通勤」在 25 min / 30 km 的包线和高密度空域下，现阶段不成立——不是飞机不够好，是运行条件还没被建立。</p>
 
-</section><section data-page-node-id="ezHItmmuS1S8yoM47eDq16" class="sheet" id="s3">
-  <div data-page-node-id="ly6HEdmGgL1WAufNi30YYj" class="sh"><div data-page-node-id="Dk3JzhkbSFRbG3HZPwwFEJ"><div data-page-node-id="On3sh7DiGPrCIoc0F3LdmF" class="no">SHEET 03 / MOC / 审定证据</div><h2 data-page-node-id="hkCwfJeRjvbN88dghMT3zA">符合性验证：证据是怎么被造出来的</h2></div><div data-page-node-id="qukyAseyyAoGy5BMmxNdk4" class="tg">MOC / 审定证据</div></div>
+</section><section class="sheet" id="s3">
+  <div class="sh"><div><div class="no">SHEET 03 / MOC / 审定证据</div><h2>符合性验证：证据是怎么被造出来的</h2></div><div class="tg">MOC / 审定证据</div></div>
   
-  <div data-page-node-id="GWErEegqr1yIEPBlHnInsm" class="cols">
-    <div data-page-node-id="40f7sYaCOWWCr9AGChNmV0">
-      <h3 data-page-node-id="GDxIRFDLXy2O88ZflvWKUg"><span data-page-node-id="uNMFWVr8B61Jeaxfc8YLn2" class="idx">03.1</span>没有现成规章可套</h3>
-      <p data-page-node-id="pVFGd53JKLeIG6crCXzmGW">2022 年 2 月，民航局为这个型号单独颁布《EH216-S 型无人驾驶航空器系统专用条件》。这句话的分量在于：审定时连「按什么标准审」都是新写的。安全基线不是从既有条款里查出来的，是边审边定义出来的。</p>
-      <p data-page-node-id="srPMCo8lRU9qnPkVQMVQwr">因此「符合性」在这里不是填表，而是要用一套方法把「设计满足了某条要求」证明给审查方看。</p>
+  <div class="cols">
+    <div>
+      <h3><span class="idx">03.1</span>没有现成规章可套</h3>
+      <p>2022 年 2 月，民航局为这个型号单独颁布《EH216-S 型无人驾驶航空器系统专用条件》。这句话的分量在于：审定时连「按什么标准审」都是新写的。安全基线不是从既有条款里查出来的，是边审边定义出来的。</p>
+      <p>因此「符合性」在这里不是填表，而是要用一套方法把「设计满足了某条要求」证明给审查方看。</p>
     </div>
-    <div data-page-node-id="REBaixraLLZ6Lda7vEZb3P">
-      <table data-page-node-id="ypNKH0l1j4Ru12b1qDx5Nf">
-        <caption data-page-node-id="KJvG56JnqJoHagKPYhhO7a">表 03-1 · 常用符合性方法（教学化整理，非条款原文）</caption>
-        <thead data-page-node-id="GCL1PEiL5zWcCEswl7to8H"><tr data-page-node-id="G2hsCg2YQPqnlaA6EqMY7w"><th data-page-node-id="xFjeINBuEmc5d4PoknQaze" style="width:70px">代号</th><th data-page-node-id="x9iYwQ1c8LyUNDd7srIkcX">方法</th><th data-page-node-id="v0BdZgyVOKaOAVIKticxcN">适用</th></tr></thead>
-        <tbody data-page-node-id="60M4tlaIfQCGdaK9V9zJZA">
-          <tr data-page-node-id="oI6xAgFztP17YymXbXCNkh"><td data-page-node-id="GyhDV0tovMdO7qSBd0U4OL"><b data-page-node-id="fTiKmqBECVj8OhOoiLUvwB">MC0</b></td><td data-page-node-id="2QHRJZA8UxS3twAHvZFgft">符合性声明 / 说明</td><td data-page-node-id="OyNWDldfnWrLM4KPZwpICL">条款本身可由设计说明直接覆盖</td></tr>
-          <tr data-page-node-id="JdHeB42iZ86FzSYX5FFgg3"><td data-page-node-id="NH8zsdouY76R8DtlNQuF85"><b data-page-node-id="BIjNF3I4DUdW5clM2Ep2ea">MC1</b></td><td data-page-node-id="q5ugGNGn890lIyukFJTIuS">设计图纸与计算</td><td data-page-node-id="a8AmZYDXPyjuWPHtbFkLLp">结构强度、载荷、包线</td></tr>
-          <tr data-page-node-id="O1IelbDZkROLwDoi9KnjQ7"><td data-page-node-id="yD3YwLakBX51VpgfCoYflp"><b data-page-node-id="2mDsTR9dGGrut03qb8Hfyp">MC2</b></td><td data-page-node-id="dDeZjl2qIiXJNnnxV7KEvq">分析 / 仿真</td><td data-page-node-id="bm20Tihxm53AmZ0ej1eJhI">飞控逻辑、失效重构</td></tr>
-          <tr data-page-node-id="gd1GcQKIiAIwVsnKHpAGzT"><td data-page-node-id="teocmoBSKanGEGUawpXcMi"><b data-page-node-id="bNPnVjEqujYgHPEMIJxIoA">MC3</b></td><td data-page-node-id="G1JPlxyO97iIAapuG4x8kL">安全性评估</td><td data-page-node-id="zsRPFYivtyA10sLBnOj6Ep">失效影响、共因分析</td></tr>
-          <tr data-page-node-id="tmjxOIiIjQTEAREQ7yyIKk"><td data-page-node-id="Rk3uISrkIgmHacT2HEJU1a"><b data-page-node-id="EG1cdRk7p0xzw41mX6LIqa">MC4</b></td><td data-page-node-id="ojtwT2B6TzOmaq7vOYTZkk">实验室试验</td><td data-page-node-id="5eNRMWRx387STXHA8rz1dr">静力、落震、螺旋桨</td></tr>
-          <tr data-page-node-id="0E8wVEAbiJiSv9qNIZSNQa"><td data-page-node-id="tanJMvJM3kxELEesMbts1S"><b data-page-node-id="SMSY0lFsVCTYCW0ylXlH15">MC5</b></td><td data-page-node-id="EIL90bOp9IoPEhd6d3F7Fg">地面 / 机上检查</td><td data-page-node-id="h6BUYExwI5GPg23jKNWwLv">装配、制造符合性</td></tr>
-          <tr data-page-node-id="kNQPFsH5Yhp2WpeEZUoi0F"><td data-page-node-id="BbXGkMwTDnVVgQ4rZPViOY"><b data-page-node-id="wQk5fSohkKfKF9163e6sjB">MC6</b></td><td data-page-node-id="DCWXSNziOaFkOPT6fB5Gk1">飞行试验</td><td data-page-node-id="Xttli5nXz58UZA6zY5kgVH">最终型号合格审定试飞</td></tr>
-          <tr data-page-node-id="IQiA25JHuO7FBicJ60T0bR"><td data-page-node-id="fQLJZHCiKiwzA5Yx9y3pUY"><b data-page-node-id="rofzAcoYrvwSUDSsR2hmC1">MC7–9</b></td><td data-page-node-id="y3TQGHBI3xEx0m5lafSSIN">模拟器 / 设备鉴定 / 其他</td><td data-page-node-id="hJAq34DeCGsaYfcGZD1zTg">按条款选用</td></tr>
+    <div>
+      <table>
+        <caption>表 03-1 · 常用符合性方法（教学化整理，非条款原文）</caption>
+        <thead><tr><th style="width:70px">代号</th><th>方法</th><th>适用</th></tr></thead>
+        <tbody>
+          <tr><td><b>MC0</b></td><td>符合性声明 / 说明</td><td>条款本身可由设计说明直接覆盖</td></tr>
+          <tr><td><b>MC1</b></td><td>设计图纸与计算</td><td>结构强度、载荷、包线</td></tr>
+          <tr><td><b>MC2</b></td><td>分析 / 仿真</td><td>飞控逻辑、失效重构</td></tr>
+          <tr><td><b>MC3</b></td><td>安全性评估</td><td>失效影响、共因分析</td></tr>
+          <tr><td><b>MC4</b></td><td>实验室试验</td><td>静力、落震、螺旋桨</td></tr>
+          <tr><td><b>MC5</b></td><td>地面 / 机上检查</td><td>装配、制造符合性</td></tr>
+          <tr><td><b>MC6</b></td><td>飞行试验</td><td>最终型号合格审定试飞</td></tr>
+          <tr><td><b>MC7–9</b></td><td>模拟器 / 设备鉴定 / 其他</td><td>按条款选用</td></tr>
         </tbody>
       </table>
     </div>
   </div>
-  <h3 data-page-node-id="C5WV3WktDSUaZ2B26tunJY"><span data-page-node-id="f2njTblj2Z9HBTm9usMurU" class="idx">03.2</span>数字能证明什么，不能证明什么</h3>
-  <p data-page-node-id="efX2fYFHL7C7fMIDD2k4G3">官方披露：1000+ 天、500+ 摸底试验、40 000+ 飞行架次、65 大项审查实验、450+ 正式符合性验证科目。这些证据的强度在于<b data-page-node-id="N8uHB8Drw6wvDuG4M85ifB">覆盖面与可追溯</b>——每一条要求都能对应到一种证明方法。</p>
-  <div data-page-node-id="DvBvtajIJWJxxVL8FFqDeB" class="note"><span data-page-node-id="pkModg5W2FHkBJnvaduX4g" class="lab">作者判断</span>但证据数量不等于风险穷尽。专用条件是为一个具体型号、在具体运行设想下写就的；当运行场景从景区扩展到城区、从白天扩展到夜航，原来的符合性矩阵需要重新打开。四证证明的是「按当时的约定证明过了」，不是「证明完了」。</div>
+  <h3><span class="idx">03.2</span>数字能证明什么，不能证明什么</h3>
+  <p>官方披露：1000+ 天、500+ 摸底试验、40 000+ 飞行架次、65 大项审查实验、450+ 正式符合性验证科目。这些证据的强度在于<b>覆盖面与可追溯</b>——每一条要求都能对应到一种证明方法。</p>
+  <div class="note"><span class="lab">作者判断</span>但证据数量不等于风险穷尽。专用条件是为一个具体型号、在具体运行设想下写就的；当运行场景从景区扩展到城区、从白天扩展到夜航，原来的符合性矩阵需要重新打开。四证证明的是「按当时的约定证明过了」，不是「证明完了」。</div>
 
-</section><section data-page-node-id="PRMyEHyHD0KhBHKZMtX4Sd" class="sheet" id="s4">
-  <div data-page-node-id="p5bkj7htrDaRFG3Fu2ZzRK" class="sh"><div data-page-node-id="Qu480AwCHMRKEjIUdpPhXf"><div data-page-node-id="v6QdhVhPx0qXzx9Ro0GCUF" class="no">SHEET 04 / ARCH / 系统兜底</div><h2 data-page-node-id="ViTpTEIhy8GUMripZZlVlr">没有驾驶员兜底：冗余必须自己闭环</h2></div><div data-page-node-id="KDOGyIweEsEYojZxEsFEst" class="tg">ARCH / 系统兜底</div></div>
+</section><section class="sheet" id="s4">
+  <div class="sh"><div><div class="no">SHEET 04 / ARCH / 系统兜底</div><h2>没有驾驶员兜底：冗余必须自己闭环</h2></div><div class="tg">ARCH / 系统兜底</div></div>
   
-  <div data-page-node-id="PSe97RkttQ9A9fctyh7pFH" class="fig"><svg data-page-node-id="UUkrQuhVvXZpiKnjQ0z4T9" viewBox="0 0 880 210" role="img" aria-label="失效处置时序：检测、决策、执行的时间预算"><line data-page-node-id="2EBL1fAvY3WemcX4RJ3JlV" x1="40" y1="120" x2="850" y2="120" stroke="#0d3a63" stroke-width="2"></line><circle data-page-node-id="wLcWnLnhox7rGqBKlBHkcr" cx="80" cy="120" r="6" fill="#fbfdff" stroke="#0d3a63" stroke-width="1.8"></circle><text data-page-node-id="8APdeiljoDLOtIHphMoFEl" x="80" y="102" font-family="ui-monospace,monospace" font-size="11" fill="#b0462a" text-anchor="middle">T0</text><text data-page-node-id="8woU4FGxQnCnCiOiyu8To3" x="80" y="146" font-size="12" fill="#0d3a63" text-anchor="middle">失效发生</text><line data-page-node-id="OQnEcxJ7O1aTMDctFnt6xK" x1="88" y1="120" x2="260" y2="120" stroke="#b0462a" stroke-width="1.4"></line><polygon data-page-node-id="optg6vT8njYdrHG8rSaDT4" points="264,120 256,115 256,125" fill="#b0462a"></polygon><circle data-page-node-id="pYVKNEJsjsdMrDJccTmqug" cx="270" cy="120" r="6" fill="#fbfdff" stroke="#0d3a63" stroke-width="1.8"></circle><text data-page-node-id="mgitVYAjb1uadoBTgKKAtG" x="270" y="102" font-family="ui-monospace,monospace" font-size="11" fill="#b0462a" text-anchor="middle">T1</text><text data-page-node-id="FncF6S46hQ24M4ObFroagG" x="270" y="146" font-size="12" fill="#0d3a63" text-anchor="middle">检测 / 表决</text><line data-page-node-id="FRAkRc4aClwTGkyRUuhS77" x1="278" y1="120" x2="450" y2="120" stroke="#b0462a" stroke-width="1.4"></line><polygon data-page-node-id="662UnHUIVxXXWrkrHwzZEh" points="454,120 446,115 446,125" fill="#b0462a"></polygon><circle data-page-node-id="srhgCQ0iXIYJsCMVoYd4Oh" cx="460" cy="120" r="6" fill="#fbfdff" stroke="#0d3a63" stroke-width="1.8"></circle><text data-page-node-id="TzNa9FYG0ygcxDYw9Fr65n" x="460" y="102" font-family="ui-monospace,monospace" font-size="11" fill="#b0462a" text-anchor="middle">T2</text><text data-page-node-id="V7gUXYUZXUNt2AZUmjT3Gp" x="460" y="146" font-size="12" fill="#0d3a63" text-anchor="middle">自主决策</text><line data-page-node-id="HMUdJirHrpCmo6qnOeORPB" x1="468" y1="120" x2="640" y2="120" stroke="#b0462a" stroke-width="1.4"></line><polygon data-page-node-id="MSrKgNS0CLBJG322zESlGR" points="644,120 636,115 636,125" fill="#b0462a"></polygon><circle data-page-node-id="cXxyF9Waj9i7rybr3UASaU" cx="650" cy="120" r="6" fill="#fbfdff" stroke="#0d3a63" stroke-width="1.8"></circle><text data-page-node-id="ilziiO2rDQ2hOxQEeeztrE" x="650" y="102" font-family="ui-monospace,monospace" font-size="11" fill="#b0462a" text-anchor="middle">T3</text><text data-page-node-id="zqoJKH2lKK2XPmb9sgGUoL" x="650" y="146" font-size="12" fill="#0d3a63" text-anchor="middle">执行</text><line data-page-node-id="53oLLEnd59pW6fo1kiNAgr" x1="658" y1="120" x2="830" y2="120" stroke="#b0462a" stroke-width="1.4"></line><polygon data-page-node-id="6gwqLhFUBoHS7VbOzr9ure" points="834,120 826,115 826,125" fill="#b0462a"></polygon><circle data-page-node-id="U3zGfoyMMzNVHQH3qPu9xo" cx="840" cy="120" r="6" fill="#fbfdff" stroke="#0d3a63" stroke-width="1.8"></circle><text data-page-node-id="w9TyEIuB51EIGQypnyfRLA" x="840" y="102" font-family="ui-monospace,monospace" font-size="11" fill="#b0462a" text-anchor="middle">T4</text><text data-page-node-id="b8ByXACEiQi4N2qF18xSex" x="840" y="146" font-size="12" fill="#0d3a63" text-anchor="middle">着陆 / 迫降</text><text data-page-node-id="EsIAIUruc1Do8bdGCBTOsX" x="445" y="186" font-family="ui-monospace,monospace" font-size="9.5" fill="#5b81a6" text-anchor="middle">25 min 续航 / 30 km 航程 ⇒ 返航窗口极窄，迫降策略优先于返航</text></svg><figcaption data-page-node-id="hZGPKjJVdxlcQfXYkkBGbj"><span data-page-node-id="0Hag2Gl7b3k18JQZWcqIFL">图 04-1 · 失效处置时序与时间预算</span><span data-page-node-id="D4FDbnGijZVWoeu2Pi1vr7">T0 – T4</span></figcaption></div>
-  <div data-page-node-id="1kwOl3mwK6jKbyfID6Z8Hv" class="cols" style="margin-top:18px">
-    <div data-page-node-id="JX2Mxc93HgcLxovlbGGNZN">
-      <h3 data-page-node-id="dEdEQUewmEExI3Li4VVwWq"><span data-page-node-id="Mo99nH0EHDUGV3mBDq7EC5" class="idx">04.1</span>机上必须自己做完四件事</h3>
-      <p data-page-node-id="NnrZo7XSI5PC7QiKyfl5Po">检测 → 决策 → 执行 → 着陆，全程没有现场人为判断。公开资料提到的「全备份关键部件、多套飞控表决、内置故障安全系统自主判断继续飞或安全迫降」，正是为这四步准备的。</p>
-      <table data-page-node-id="fEUtq4LjUOavg1cwgxwylm">
-        <caption data-page-node-id="UbAiBaaFZ6ow2ADcFep42x">表 04-1 · 冗余层与残余问题</caption>
-        <thead data-page-node-id="MmK7XN7BT7dDHlACNyxsgp"><tr data-page-node-id="uB07qtaoDtrsuthxC6QmPO"><th data-page-node-id="EQReFPBBbQQEQc0ZGJS3JI">层次</th><th data-page-node-id="7mogXNUazyRG4OtBDjpXRr">措施</th><th data-page-node-id="ZEr2DP98vGQb8iHZTie99P">残余问题</th></tr></thead>
-        <tbody data-page-node-id="uR9l05FdizHiLnrzNRmNTU">
-          <tr data-page-node-id="uk6wTu7yp6erbUhFCFiQFb"><td data-page-node-id="KFZJET9J5pzKU2jkRGDBfi"><b data-page-node-id="HysdP9vuaK12BqjdfMHgdC">部件</b></td><td data-page-node-id="IKLuJOWiXeBB4NKUbbQzF3">关键飞行部件全备份</td><td data-page-node-id="HQE64HD3KkfjToH0wvQvoj">备份是否物理隔离</td></tr>
-          <tr data-page-node-id="1axpei4okb0hgk6JrC7qIB"><td data-page-node-id="gqxiUsyzIS1fGjagvCaH0O"><b data-page-node-id="Je4JlOXLySiGM2zgsv5eR1">系统</b></td><td data-page-node-id="gEJjhfCv9CGnXIlUFYYF6v">多套飞控 + 表决 + 传感器</td><td data-page-node-id="QkOzWhTgNdiNEcY9Wf7fYg">同版软件 / 共电源导致共因</td></tr>
-          <tr data-page-node-id="bhDhHGceqcrqrGnJuBASPI"><td data-page-node-id="EYucgF8bbONHSjw90IoYFD"><b data-page-node-id="n221Hk1JXOGR5pGDukiVjw">动力</b></td><td data-page-node-id="3g1YZrJpD2XB413eKYM44u">8 轴 16 旋翼，单桨失效可重构</td><td data-page-node-id="Szq5d5M4smDjYM3FZjPeHD">相邻多轴失效的配平边界</td></tr>
-          <tr data-page-node-id="zHI4ih21QzIcS1BMJWknAB"><td data-page-node-id="GXCMy5NWDllkNOBscLsCHD"><b data-page-node-id="Pt4DDNdjYxA4QovCL11XWb">能源</b></td><td data-page-node-id="rogcdCjy4VjY6IJ5Z7tdCm">智能电池管理</td><td data-page-node-id="yoElaq4RdQcA5CudQHxV27">热失控蔓延、低温与老化</td></tr>
-          <tr data-page-node-id="P7Tow7uDrAkLRJijM38BX6"><td data-page-node-id="yuedIP2UrHdsQQQNEm7Cf6"><b data-page-node-id="zi2sZEtVORjKE8ajLO72Pb">决策</b></td><td data-page-node-id="EUBU6388M4dREv8qRtgGy9">fail-safe 自主迫降</td><td data-page-node-id="JDJ30qSDy6GGw4tD494HYq">可选迫降点是否始终可达</td></tr>
+  <div class="fig"><svg viewBox="0 0 880 210" role="img" aria-label="失效处置时序：检测、决策、执行的时间预算"><line x1="40" y1="120" x2="850" y2="120" stroke="#0d3a63" stroke-width="2"/><circle cx="80" cy="120" r="6" fill="#fbfdff" stroke="#0d3a63" stroke-width="1.8"/><text x="80" y="102" font-family="ui-monospace,monospace" font-size="11" fill="#b0462a" text-anchor="middle">T0</text><text x="80" y="146" font-size="12" fill="#0d3a63" text-anchor="middle">失效发生</text><line x1="88" y1="120" x2="260" y2="120" stroke="#b0462a" stroke-width="1.4"/><polygon points="264,120 256,115 256,125" fill="#b0462a"/><circle cx="270" cy="120" r="6" fill="#fbfdff" stroke="#0d3a63" stroke-width="1.8"/><text x="270" y="102" font-family="ui-monospace,monospace" font-size="11" fill="#b0462a" text-anchor="middle">T1</text><text x="270" y="146" font-size="12" fill="#0d3a63" text-anchor="middle">检测 / 表决</text><line x1="278" y1="120" x2="450" y2="120" stroke="#b0462a" stroke-width="1.4"/><polygon points="454,120 446,115 446,125" fill="#b0462a"/><circle cx="460" cy="120" r="6" fill="#fbfdff" stroke="#0d3a63" stroke-width="1.8"/><text x="460" y="102" font-family="ui-monospace,monospace" font-size="11" fill="#b0462a" text-anchor="middle">T2</text><text x="460" y="146" font-size="12" fill="#0d3a63" text-anchor="middle">自主决策</text><line x1="468" y1="120" x2="640" y2="120" stroke="#b0462a" stroke-width="1.4"/><polygon points="644,120 636,115 636,125" fill="#b0462a"/><circle cx="650" cy="120" r="6" fill="#fbfdff" stroke="#0d3a63" stroke-width="1.8"/><text x="650" y="102" font-family="ui-monospace,monospace" font-size="11" fill="#b0462a" text-anchor="middle">T3</text><text x="650" y="146" font-size="12" fill="#0d3a63" text-anchor="middle">执行</text><line x1="658" y1="120" x2="830" y2="120" stroke="#b0462a" stroke-width="1.4"/><polygon points="834,120 826,115 826,125" fill="#b0462a"/><circle cx="840" cy="120" r="6" fill="#fbfdff" stroke="#0d3a63" stroke-width="1.8"/><text x="840" y="102" font-family="ui-monospace,monospace" font-size="11" fill="#b0462a" text-anchor="middle">T4</text><text x="840" y="146" font-size="12" fill="#0d3a63" text-anchor="middle">着陆 / 迫降</text><text x="445" y="186" font-family="ui-monospace,monospace" font-size="9.5" fill="#5b81a6" text-anchor="middle">25 min 续航 / 30 km 航程 ⇒ 返航窗口极窄，迫降策略优先于返航</text></svg><figcaption><span>图 04-1 · 失效处置时序与时间预算</span><span>T0 – T4</span></figcaption></div>
+  <div class="cols" style="margin-top:18px">
+    <div>
+      <h3><span class="idx">04.1</span>机上必须自己做完四件事</h3>
+      <p>检测 → 决策 → 执行 → 着陆，全程没有现场人为判断。公开资料提到的「全备份关键部件、多套飞控表决、内置故障安全系统自主判断继续飞或安全迫降」，正是为这四步准备的。</p>
+      <table>
+        <caption>表 04-1 · 冗余层与残余问题</caption>
+        <thead><tr><th>层次</th><th>措施</th><th>残余问题</th></tr></thead>
+        <tbody>
+          <tr><td><b>部件</b></td><td>关键飞行部件全备份</td><td>备份是否物理隔离</td></tr>
+          <tr><td><b>系统</b></td><td>多套飞控 + 表决 + 传感器</td><td>同版软件 / 共电源导致共因</td></tr>
+          <tr><td><b>动力</b></td><td>8 轴 16 旋翼，单桨失效可重构</td><td>相邻多轴失效的配平边界</td></tr>
+          <tr><td><b>能源</b></td><td>智能电池管理</td><td>热失控蔓延、低温与老化</td></tr>
+          <tr><td><b>决策</b></td><td>fail-safe 自主迫降</td><td>可选迫降点是否始终可达</td></tr>
         </tbody>
       </table>
     </div>
-    <div data-page-node-id="cjkMQ0hyQN2mDfcLbfSdux">
-      <h3 data-page-node-id="ICdu3bZivQ9YBDiI0asPaG"><span data-page-node-id="GOYEAQTvg0VAHPEfny8XfB" class="idx">04.2</span>「返航」不如「迫降」现实</h3>
-      <p data-page-node-id="ASZQk1V6VJG13Kb5bPpTDE">25 min 续航、30 km 设计航程意味着留给处置的时间窗口非常窄。有人机可以靠驾驶员盘旋、等待、选场；这里必须预先在航线沿线布好备降点，并把「哪里能落」写进飞行计划，而不是出事后临时找。</p>
-      <p data-page-node-id="pkubt6SS9g0D9Sj4cCh42w">换句话说，<b data-page-node-id="Q4i2W6lCRIzkALbX25NAx7">应急能力主要不是机上能力，是航线规划能力</b>。这又回到了体系。</p>
-      <div data-page-node-id="PWSBlDESt9WUYFGnmbV80R" class="note"><span data-page-node-id="QI11MHvPJjZt9cyDo1T91l" class="lab">共因提醒</span>上面每一层冗余都默认「电还在、链路还在、地面站还在」。电源与链路是跨层共因，任何一层的冗余度都会被它们同时打折；这也是我认为最该做共因分析的位置。</div>
-      <h3 data-page-node-id="XntAgAlo0h4dW8BPG9DsTA"><span data-page-node-id="bPcVDofAZ7blEyPIuey293" class="idx">04.3</span>和按功能分解的老方法比</h3>
-      <p data-page-node-id="nlwl3enr3XN3srwTF0w2dL">如果按功能危害分析逐项列失效状态，会得到一个很整齐的表格，但容易把「体系没接住」这类风险漏掉。我改用时序图，是想把「时间不够」这个约束摆到台面上——它不是某个部件的失效，却是很多失效最终变严重的原因。</p>
+    <div>
+      <h3><span class="idx">04.2</span>「返航」不如「迫降」现实</h3>
+      <p>25 min 续航、30 km 设计航程意味着留给处置的时间窗口非常窄。有人机可以靠驾驶员盘旋、等待、选场；这里必须预先在航线沿线布好备降点，并把「哪里能落」写进飞行计划，而不是出事后临时找。</p>
+      <p>换句话说，<b>应急能力主要不是机上能力，是航线规划能力</b>。这又回到了体系。</p>
+      <div class="note"><span class="lab">共因提醒</span>上面每一层冗余都默认「电还在、链路还在、地面站还在」。电源与链路是跨层共因，任何一层的冗余度都会被它们同时打折；这也是我认为最该做共因分析的位置。</div>
+      <h3><span class="idx">04.3</span>和按功能分解的老方法比</h3>
+      <p>如果按功能危害分析逐项列失效状态，会得到一个很整齐的表格，但容易把「体系没接住」这类风险漏掉。我改用时序图，是想把「时间不够」这个约束摆到台面上——它不是某个部件的失效，却是很多失效最终变严重的原因。</p>
     </div>
   </div>
 
-</section><section data-page-node-id="gNkK0H7Gxqaf9gEL6Zs0d3" class="sheet" id="s5">
-  <div data-page-node-id="8is9lCxxbmrlfRZaAFLwpz" class="sh"><div data-page-node-id="9LZhmpA4yADiwUsZa9QPSP"><div data-page-node-id="BtZXobytZ2eJyAVDCTtspc" class="no">SHEET 05 / C2 / 信息与运行</div><h2 data-page-node-id="Ky9yJvisJFO3ykevWThl9W">链路、地面站与网络安全</h2></div><div data-page-node-id="r3D9UIabc08Q4vcoDxW9Q4" class="tg">C2 / 信息与运行</div></div>
+</section><section class="sheet" id="s5">
+  <div class="sh"><div><div class="no">SHEET 05 / C2 / 信息与运行</div><h2>链路、地面站与网络安全</h2></div><div class="tg">C2 / 信息与运行</div></div>
   
-  <div data-page-node-id="jvViOJRNv6sRzLif9v41z4" class="cols">
-    <div data-page-node-id="sFsZLlWU5mA9Xe51rTENQZ">
-      <h3 data-page-node-id="m3saKN66Fq9EQLBlmZde6j"><span data-page-node-id="eLSYe4U8dQUPituFZEchQl" class="idx">05.1</span>链路既是神经，又不能是依赖</h3>
-      <p data-page-node-id="9GHWcHoDH9XXmqR91Pmk1e">官方强调加密通信与单机独立密钥、机队集中调度。但这里有一对必须同时成立、又很难同时验证的要求：</p>
-      <p data-page-node-id="GVX6Um1CWM5ZKso4dhjKxD"><b data-page-node-id="x11YrKDGi6xGxknxK7ryCV">①</b> 链路是地面监控、调度与应急干预的通道，属于运行体系的一部分；<br data-page-node-id="fpXfzIqMbeDVm2uC0L0w4x"><b data-page-node-id="UqHcjcBv1GFuwCK9XvAD4U">②</b> 链路中断时，航空器仍须自主完成飞行或安全迫降，不能「等地面指令」。</p>
-      <p data-page-node-id="MWCdZAXttftiyKDcTKTNly">对有人机，通信中断后飞行员照飞；对无人驾驶，通信中断必须触发一套预设的自主行为。这条边界如果没验证透，冗余设计再漂亮也没有落点。</p>
-      <table data-page-node-id="w3SL1jrRSEkl1aBgsJl156">
-        <caption data-page-node-id="QOkLhsSTrlFaHOYtAMyn2N">表 05-1 · 信息与运行侧威胁清单</caption>
-        <thead data-page-node-id="tIyZvtNrvE9MakEqeBKtyt"><tr data-page-node-id="HYE5NJfv86t2O8SVdkpLM6"><th data-page-node-id="eIf2TLDaYMmqLEXv6tambs">威胁</th><th data-page-node-id="Zf6mdbtBLdSkVRxrhWvqES">后果</th><th data-page-node-id="vyq4b8YrvbJLATljGVWVNh">控制思路</th></tr></thead>
-        <tbody data-page-node-id="dSGYePBGOZZyjioFmX9tZt">
-          <tr data-page-node-id="h0tC1lIbiXgSGmWKydc6qW"><td data-page-node-id="4basuqBvnDS4PnYLRdeZ8i">C2 链路中断 / 降级</td><td data-page-node-id="yccCwrKo8rvcQobTAdQrq2">失去监控与干预</td><td data-page-node-id="6DHu4E082vrLjZB0U5H2vT">失联预设模式、不依赖地面的关键决策</td></tr>
-          <tr data-page-node-id="EXYnEeziasDqCIWpgEsp8k"><td data-page-node-id="KepFm1VB3cO1w4GjLvgs2x">GNSS 欺骗 / 干扰</td><td data-page-node-id="mZibdWmeRgpcQgnOXaYNSX">位置 belief 错误</td><td data-page-node-id="c6eJ788BADIjMV1uhqJpMf">惯导 / 视觉 / 地标备份定位</td></tr>
-          <tr data-page-node-id="4qGa1Z0BuCVbdnumo9gceq"><td data-page-node-id="Olx81MAUArli4U5IAA5kVy">地面站被入侵或误操作</td><td data-page-node-id="0UEcmMFB7Q6yASkqs2eiNa">机队级错误指令</td><td data-page-node-id="UkRx9Scs9S8zF3VbKSzMr9">权限分级、双人复核、指令白名单</td></tr>
-          <tr data-page-node-id="y4rOjP9Ye207zyly153O2w"><td data-page-node-id="Fuxaz9MLz1UixvUQo9kdUr">机队调度冲突</td><td data-page-node-id="BkrC7C2jfOZxRxIUxbjrTT">多机间隔不足</td><td data-page-node-id="UIvMn1PtYMrEmDXllD3DXX">集中调度 + 电子围栏 + 航线隔离</td></tr>
-          <tr data-page-node-id="AfhWvU5GIlBB6d0HxN1lEo"><td data-page-node-id="0jikdzUa5bfHv9sFYlkQ23">软件版本 / 配置不一致</td><td data-page-node-id="WGF13YpMC0aW7Qfdpe2tUC">同型机行为分叉</td><td data-page-node-id="i9dZkiQQTDzkhIWuAHA14L">构型管理与批次追溯</td></tr>
-          <tr data-page-node-id="gnJlzbMvNC5DZVMGAdZZQj"><td data-page-node-id="0kpQ6TyslteT32ZHazmdBH">飞行数据被篡改或缺失</td><td data-page-node-id="E2NBTtLzfaACk5OFpagVKM">事件无法复盘</td><td data-page-node-id="5cNeOmc6Gpx0sRe1Jvlqic">机载记录 + 独立留存</td></tr>
+  <div class="cols">
+    <div>
+      <h3><span class="idx">05.1</span>链路既是神经，又不能是依赖</h3>
+      <p>官方强调加密通信与单机独立密钥、机队集中调度。但这里有一对必须同时成立、又很难同时验证的要求：</p>
+      <p><b>①</b> 链路是地面监控、调度与应急干预的通道，属于运行体系的一部分；<br><b>②</b> 链路中断时，航空器仍须自主完成飞行或安全迫降，不能「等地面指令」。</p>
+      <p>对有人机，通信中断后飞行员照飞；对无人驾驶，通信中断必须触发一套预设的自主行为。这条边界如果没验证透，冗余设计再漂亮也没有落点。</p>
+      <table>
+        <caption>表 05-1 · 信息与运行侧威胁清单</caption>
+        <thead><tr><th>威胁</th><th>后果</th><th>控制思路</th></tr></thead>
+        <tbody>
+          <tr><td>C2 链路中断 / 降级</td><td>失去监控与干预</td><td>失联预设模式、不依赖地面的关键决策</td></tr>
+          <tr><td>GNSS 欺骗 / 干扰</td><td>位置 belief 错误</td><td>惯导 / 视觉 / 地标备份定位</td></tr>
+          <tr><td>地面站被入侵或误操作</td><td>机队级错误指令</td><td>权限分级、双人复核、指令白名单</td></tr>
+          <tr><td>机队调度冲突</td><td>多机间隔不足</td><td>集中调度 + 电子围栏 + 航线隔离</td></tr>
+          <tr><td>软件版本 / 配置不一致</td><td>同型机行为分叉</td><td>构型管理与批次追溯</td></tr>
+          <tr><td>飞行数据被篡改或缺失</td><td>事件无法复盘</td><td>机载记录 + 独立留存</td></tr>
         </tbody>
       </table>
     </div>
-    <div data-page-node-id="gw0Z1QUkzNYeUDZERkbNeI">
-      <h3 data-page-node-id="h2b3EFKYKVvPGpT8ee8eQI"><span data-page-node-id="6A2GHS0nniE3cmNBhBGELu" class="idx">05.2</span>OC 审的是组织，不是设备</h3>
-      <p data-page-node-id="I0V0gL75Pe52l9FTcs12c4">2025 年 3 月首批 OC 发给运营航司，审核覆盖运营主体、组织架构、运营制度、运行环境与安全性能。这句话值得读两遍：拿到 OC 的是<b data-page-node-id="M4uDeDiaHj8Ee5rQ0AO5EH">公司</b>，不是飞机。</p>
-      <p data-page-node-id="fwVTt2LAY7ofefr1I4sycN">因此人员资质、值班制度、维护间隔、事件上报、演练频率，都是安全系统的一部分；设备再冗余，组织失灵一样会出事。</p>
-      <div data-page-node-id="HeDxy9HDPTLBDaY7Ea6NTR" class="note"><span data-page-node-id="tyLFE1uIBchT3QA59HfQLj" class="lab">作者判断</span>这类产品最容易被低估的风险是「流程性共因」：同一个地面站、同一套排班、同一版运行手册，会同时影响它监控的所有飞机。硬件冗余解决不了这个。</div>
-      <h3 data-page-node-id="9BjDXqI58gQmcafAwMhOr4"><span data-page-node-id="FzgDdxCizOzmiH8jyHOHXE" class="idx">05.3</span>乘客看不见的那一层</h3>
-      <p data-page-node-id="jBCPoETS0BKU80nDPA23et">乘客接触到的是舱门和座椅，接触到安全体系的地方其实只有登机前的安全简报。信息设计的缺口就在这里：把一套复杂的运行体系，压缩成两分钟内能理解、且不引起误解的说明。</p>
+    <div>
+      <h3><span class="idx">05.2</span>OC 审的是组织，不是设备</h3>
+      <p>2025 年 3 月首批 OC 发给运营航司，审核覆盖运营主体、组织架构、运营制度、运行环境与安全性能。这句话值得读两遍：拿到 OC 的是<b>公司</b>，不是飞机。</p>
+      <p>因此人员资质、值班制度、维护间隔、事件上报、演练频率，都是安全系统的一部分；设备再冗余，组织失灵一样会出事。</p>
+      <div class="note"><span class="lab">作者判断</span>这类产品最容易被低估的风险是「流程性共因」：同一个地面站、同一套排班、同一版运行手册，会同时影响它监控的所有飞机。硬件冗余解决不了这个。</div>
+      <h3><span class="idx">05.3</span>乘客看不见的那一层</h3>
+      <p>乘客接触到的是舱门和座椅，接触到安全体系的地方其实只有登机前的安全简报。信息设计的缺口就在这里：把一套复杂的运行体系，压缩成两分钟内能理解、且不引起误解的说明。</p>
     </div>
   </div>
 
-</section><section data-page-node-id="OA1tw02GXSBUbhxDV0iccl" class="sheet" id="s6">
-  <div data-page-node-id="eXp3SIQKjo7bmC1Z6fhB8h" class="sh"><div data-page-node-id="oOdFMlPZ5gJiiVHCHxd7am"><div data-page-node-id="OxpLgn0E21CN3GO5c2sEta" class="no">SHEET 06 / 3RD PARTY / 外部风险</div><h2 data-page-node-id="rMTyYTOQDOj9IiEIv216Jh">第三方风险与公众接受度</h2></div><div data-page-node-id="Q1lDKb4Uo7IcXBl8cBcKmw" class="tg">3RD PARTY / 外部风险</div></div>
+</section><section class="sheet" id="s6">
+  <div class="sh"><div><div class="no">SHEET 06 / 3RD PARTY / 外部风险</div><h2>第三方风险与公众接受度</h2></div><div class="tg">3RD PARTY / 外部风险</div></div>
   
-  <div data-page-node-id="tODT0mJO7VNgiinOEefcpF" class="cols">
-    <div data-page-node-id="JCbxWCoLEh2KsnArxDtgV6" class="fig"><svg data-page-node-id="E7YFWDZlQqnVJxxBv4atOy" viewBox="0 0 520 330" role="img" aria-label="起降点安全半径俯视示意"><g data-page-node-id="wuOldEG9AeiK3Tcj7MO0i9" stroke="#cfe0ef" stroke-width=".8"><line data-page-node-id="sm3p2O7xfEMzoSRg0QZhDB" x1="20" y1="0" x2="20" y2="330"></line><line data-page-node-id="y92yAf1iqVnlGFSbv9DDRM" x1="60" y1="0" x2="60" y2="330"></line><line data-page-node-id="EMxRJqu4Z3vcbb5YTtKTEy" x1="100" y1="0" x2="100" y2="330"></line><line data-page-node-id="PDGionuFzslM9urTibFDGb" x1="140" y1="0" x2="140" y2="330"></line><line data-page-node-id="jQs6UGNd29D8HdU15q90Lv" x1="180" y1="0" x2="180" y2="330"></line><line data-page-node-id="jeCChWF1QqoEoDYFt7M0o0" x1="220" y1="0" x2="220" y2="330"></line><line data-page-node-id="1f1yPDbBTGJAeSYxgyyPrR" x1="260" y1="0" x2="260" y2="330"></line><line data-page-node-id="OXrnEtCSDFqY3EMk52osKX" x1="300" y1="0" x2="300" y2="330"></line><line data-page-node-id="Ejc5DfxPXTVX994OaTCMXh" x1="340" y1="0" x2="340" y2="330"></line><line data-page-node-id="og0zNIUvIpj2MvmbQChdqc" x1="380" y1="0" x2="380" y2="330"></line><line data-page-node-id="5DIAa3UdcPXA7cgND2DNJX" x1="420" y1="0" x2="420" y2="330"></line><line data-page-node-id="CCyIZaFW48KMD8DDNDM7b2" x1="460" y1="0" x2="460" y2="330"></line><line data-page-node-id="gaRcT9zaIRDJQd6mMDcZvK" x1="500" y1="0" x2="500" y2="330"></line><line data-page-node-id="muxNLyInai5J7YCge8uOwi" x1="0" y1="20" x2="520" y2="20"></line><line data-page-node-id="2LCWdELJTQmCcbgCwHjVXL" x1="0" y1="60" x2="520" y2="60"></line><line data-page-node-id="x4mSSDd1ERGPWfUj4k0sPY" x1="0" y1="100" x2="520" y2="100"></line><line data-page-node-id="gvsIWR946Imj9LRYs141U6" x1="0" y1="140" x2="520" y2="140"></line><line data-page-node-id="AIPcG6VzfNT5VokaVJWfn5" x1="0" y1="180" x2="520" y2="180"></line><line data-page-node-id="XwufUVqsly0PZdOAuECDuD" x1="0" y1="220" x2="520" y2="220"></line><line data-page-node-id="JQWvgKzyW57AVojMnvyXjq" x1="0" y1="260" x2="520" y2="260"></line><line data-page-node-id="TnV3LLEsjBh8sUV9qlZUuu" x1="0" y1="300" x2="520" y2="300"></line></g><circle data-page-node-id="cECSH5yHA3PBBWls6qhSnB" cx="260" cy="165" r="130" fill="none" stroke="#b0462a" stroke-width="1.6" stroke-dasharray="6 4"></circle><circle data-page-node-id="BitqpD5dDG2E0CLthD7jGj" cx="260" cy="165" r="95" fill="none" stroke="#1b5583" stroke-width="1.6" stroke-dasharray="4 4"></circle><circle data-page-node-id="InoaxDE8iFKrINyz3QhteJ" cx="260" cy="165" r="52" fill="none" stroke="#0d3a63" stroke-width="1.6"></circle><circle data-page-node-id="6eNXL0EMjhqKAwowSK53WU" cx="260" cy="165" r="26" fill="#e8f2fb" stroke="#0d3a63" stroke-width="2"></circle><text data-page-node-id="OrrN39p6qzr0VAeeQOHngH" x="260" y="169" font-family="ui-monospace,monospace" font-size="10" fill="#0d3a63" text-anchor="middle">A/C</text><g data-page-node-id="hMBjKhnyjNxsrd6TB3npar" fill="#b0462a" font-family="ui-monospace,monospace" font-size="9"><circle data-page-node-id="QPKhulgxkjtCZZ6pFLkAPI" cx="260" cy="25" r="3"></circle><text data-page-node-id="3x8Q9kAQvaXbB8EP8rN8vc" x="260" y="18" text-anchor="middle">R = 130 清空区</text><text data-page-node-id="GDlKaUTMd1sDXSq38tOP1c" x="400" y="290">① 围观者 / 儿童</text><text data-page-node-id="8g1zoHpXDuPQxQBFVOelFh" x="400" y="305">② 车辆与硬质地面</text></g><text data-page-node-id="MtOZQOSY5G3ukIZLBhuHQG" x="20" y="318" font-family="ui-monospace,monospace" font-size="9" fill="#5b81a6">VERTIport PLAN / 安全半径按最大风速漂移量确定 · 示意</text></svg><figcaption data-page-node-id="wEIIWwXINrwWFWE4s5z85G"><span data-page-node-id="F2WScqX3w9qztknk87yHOv">图 06-1 · 起降点安全半径俯视示意</span><span data-page-node-id="Lu8hOWDqEUwwbSqR03L6s0">非比例图</span></figcaption></div>
-    <div data-page-node-id="9A7NCV6bxxLjAtkjXk3yBF">
-      <h3 data-page-node-id="AqlBWaDTxqD6ztMZM3dmUT"><span data-page-node-id="vThgZC2Uzk6L0VroMowHpB" class="idx">06.1</span>风险主要发生在地面</h3>
-      <p data-page-node-id="U7Dz3GKVdB1NhcO5RIGHyP">景区和营地多为开放场地，围观者、儿童、车辆可能进入下洗流与桨盘范围。16 个桨盘带来的声源与下洗是分散的，安全半径要按最大风速漂移量而不是按机身尺寸定。</p>
-      <table data-page-node-id="QoL8rTw4nIUT2O7wulkCK5">
-        <caption data-page-node-id="yDOrdThOyc1YcAxblg6lDc">表 06-1 · 第三方风险与控制</caption>
-        <thead data-page-node-id="jbATwY5PwDjNTSX335Qiow"><tr data-page-node-id="wdjc9rFbPeyJE3LFsIrKCW"><th data-page-node-id="Zs3BvldBtgT0cVBNUDxDIW">风险源</th><th data-page-node-id="oDoU7ZwCZ26OiHqLcIVTFV">控制</th></tr></thead>
-        <tbody data-page-node-id="zyqnPYKHBzsKYZq46Z9T00">
-          <tr data-page-node-id="OyzTmZZ1HmfquY2kGVoiBW"><td data-page-node-id="qqWz5Kjxxsks1ConVsqnL0">围观者 / 儿童误入</td><td data-page-node-id="Oaocsd0FGDUf84VlSB0bBz">物理围栏 + 清空检测 + 声光预警 + 双人放行</td></tr>
-          <tr data-page-node-id="xKewVhVuDto1CvgOexpTc9"><td data-page-node-id="3JxCtGsIDbjhsZjBwcUAFB">车辆与硬质地面</td><td data-page-node-id="zmF0Y8dkhmNeZtzfYO0HDD">起降区铺装与隔离、迫降点预先勘选</td></tr>
-          <tr data-page-node-id="zZ5avyGCUDqJqtwPUtIABy"><td data-page-node-id="G9IfKB74gxrgpg7JV2Xu0B">侧风 / 能见度突变</td><td data-page-node-id="VyCRAQHHr5lMuZoe3SzzwE">气象门限硬性放行条件，不作「建议」</td></tr>
-          <tr data-page-node-id="SdAhsiE6iSo5cPDebJAioK"><td data-page-node-id="2gAeYMA8OFl2dsTI4ZfqEQ">噪声与振动投诉</td><td data-page-node-id="RWAkUbTFBlOZPBxLjJ9j28">运行时段限制、社区沟通、实测数据公开</td></tr>
-          <tr data-page-node-id="jikOgAFtUGUhYDQB54Lqmr"><td data-page-node-id="adPwx5K1EkBQpmenWmE0sD">落地后起火 / 侧翻</td><td data-page-node-id="kt3fActYwnGE4tbQHfXxCX">纯机械应急手柄、舱内外双操作点</td></tr>
+  <div class="cols">
+    <div class="fig"><svg viewBox="0 0 520 330" role="img" aria-label="起降点安全半径俯视示意"><g stroke="#cfe0ef" stroke-width=".8"><line x1="20" y1="0" x2="20" y2="330"/><line x1="60" y1="0" x2="60" y2="330"/><line x1="100" y1="0" x2="100" y2="330"/><line x1="140" y1="0" x2="140" y2="330"/><line x1="180" y1="0" x2="180" y2="330"/><line x1="220" y1="0" x2="220" y2="330"/><line x1="260" y1="0" x2="260" y2="330"/><line x1="300" y1="0" x2="300" y2="330"/><line x1="340" y1="0" x2="340" y2="330"/><line x1="380" y1="0" x2="380" y2="330"/><line x1="420" y1="0" x2="420" y2="330"/><line x1="460" y1="0" x2="460" y2="330"/><line x1="500" y1="0" x2="500" y2="330"/><line x1="0" y1="20" x2="520" y2="20"/><line x1="0" y1="60" x2="520" y2="60"/><line x1="0" y1="100" x2="520" y2="100"/><line x1="0" y1="140" x2="520" y2="140"/><line x1="0" y1="180" x2="520" y2="180"/><line x1="0" y1="220" x2="520" y2="220"/><line x1="0" y1="260" x2="520" y2="260"/><line x1="0" y1="300" x2="520" y2="300"/></g><circle cx="260" cy="165" r="130" fill="none" stroke="#b0462a" stroke-width="1.6" stroke-dasharray="6 4"/><circle cx="260" cy="165" r="95" fill="none" stroke="#1b5583" stroke-width="1.6" stroke-dasharray="4 4"/><circle cx="260" cy="165" r="52" fill="none" stroke="#0d3a63" stroke-width="1.6"/><circle cx="260" cy="165" r="26" fill="#e8f2fb" stroke="#0d3a63" stroke-width="2"/><text x="260" y="169" font-family="ui-monospace,monospace" font-size="10" fill="#0d3a63" text-anchor="middle">A/C</text><g fill="#b0462a" font-family="ui-monospace,monospace" font-size="9"><circle cx="260" cy="25" r="3"/><text x="260" y="18" text-anchor="middle">R = 130 清空区</text><text x="400" y="290">① 围观者 / 儿童</text><text x="400" y="305">② 车辆与硬质地面</text></g><text x="20" y="318" font-family="ui-monospace,monospace" font-size="9" fill="#5b81a6">VERTIport PLAN / 安全半径按最大风速漂移量确定 · 示意</text></svg><figcaption><span>图 06-1 · 起降点安全半径俯视示意</span><span>非比例图</span></figcaption></div>
+    <div>
+      <h3><span class="idx">06.1</span>风险主要发生在地面</h3>
+      <p>景区和营地多为开放场地，围观者、儿童、车辆可能进入下洗流与桨盘范围。16 个桨盘带来的声源与下洗是分散的，安全半径要按最大风速漂移量而不是按机身尺寸定。</p>
+      <table>
+        <caption>表 06-1 · 第三方风险与控制</caption>
+        <thead><tr><th>风险源</th><th>控制</th></tr></thead>
+        <tbody>
+          <tr><td>围观者 / 儿童误入</td><td>物理围栏 + 清空检测 + 声光预警 + 双人放行</td></tr>
+          <tr><td>车辆与硬质地面</td><td>起降区铺装与隔离、迫降点预先勘选</td></tr>
+          <tr><td>侧风 / 能见度突变</td><td>气象门限硬性放行条件，不作「建议」</td></tr>
+          <tr><td>噪声与振动投诉</td><td>运行时段限制、社区沟通、实测数据公开</td></tr>
+          <tr><td>落地后起火 / 侧翻</td><td>纯机械应急手柄、舱内外双操作点</td></tr>
         </tbody>
       </table>
     </div>
   </div>
-  <h3 data-page-node-id="v4M3BmbPxjzjbOVPi8oFif"><span data-page-node-id="87upL3zSRHg0xxBo809jjZ" class="idx">06.2</span>无人驾驶会放大舆论后果</h3>
-  <p data-page-node-id="2tmuOSSnG9sGc0GFDaCWGp">同等程度的事故，发生在「没有驾驶员的载人飞行器」上，公众对品类的信任损失会明显更大。原因不是技术，是心理契约：乘客交出的不是对一名司机的信任，而是对一套看不见的体系的信任。一次事故会被读成「体系不可信」，而不只是「这一架出了故障」。</p>
-  <div data-page-node-id="kCaXkdu2Fsmc0jXjF03fuH" class="note"><span data-page-node-id="xJPmGGniowi9CcWDtGx2QW" class="lab">作者判断</span>所以公众沟通不是运营之外的软工作，而是安全体系的一环：把运行边界（哪里能飞、什么天气不飞、失联会怎样）讲清楚，比宣传「零事故」更能建立可持续的接受度。</div>
+  <h3><span class="idx">06.2</span>无人驾驶会放大舆论后果</h3>
+  <p>同等程度的事故，发生在「没有驾驶员的载人飞行器」上，公众对品类的信任损失会明显更大。原因不是技术，是心理契约：乘客交出的不是对一名司机的信任，而是对一套看不见的体系的信任。一次事故会被读成「体系不可信」，而不只是「这一架出了故障」。</p>
+  <div class="note"><span class="lab">作者判断</span>所以公众沟通不是运营之外的软工作，而是安全体系的一环：把运行边界（哪里能飞、什么天气不飞、失联会怎样）讲清楚，比宣传「零事故」更能建立可持续的接受度。</div>
 
-</section><section data-page-node-id="8W1JmxrxWZ2WS9Zv9wRXh5" class="sheet" id="s7">
-  <div data-page-node-id="imJBdbBZjrVe79hLPD2VCO" class="sh"><div data-page-node-id="BHs6fjttSMjslgrEE9eMoa"><div data-page-node-id="hrCskIJuy6rzLkE7kYNjZC" class="no">SHEET 07 / CONCLUSION / 建议</div><h2 data-page-node-id="NMfmYRu3Gs0tFlopvAl4mj">结论：把风险放回体系里</h2></div><div data-page-node-id="uGWMxzY2PD7MU7TBDfwzho" class="tg">CONCLUSION / 建议</div></div>
+</section><section class="sheet" id="s7">
+  <div class="sh"><div><div class="no">SHEET 07 / CONCLUSION / 建议</div><h2>结论：把风险放回体系里</h2></div><div class="tg">CONCLUSION / 建议</div></div>
   
-  <p data-page-node-id="1xJhBXiV1wgBJmZ86cfUNm" class="lead">做完这一遍，我对「四证齐全」的理解变了。它不是终点，而是一张清单：设计、单机、生产、组织，各自被审过一遍。真正决定安全的，是这四段之间的接缝有没有人负责。</p>
-  <div data-page-node-id="NjkKuQ4vOad3mGGxE5HAzZ" class="cols">
-    <div data-page-node-id="MC9iGGpMw3I9taG3UJoqfQ">
-      <h3 data-page-node-id="YmpDkiisreebJnT3QWJ2x2"><span data-page-node-id="jIRF2jzeoJaGD9fo8Rb7Pk" class="idx">07.1</span>分层的改进建议</h3>
-      <table data-page-node-id="VsPdH31EIHZsRj3xPnoYFG">
-        <caption data-page-node-id="GQDtog9JTzZGZGTbWpButt">表 07-1 · 八条建议</caption>
-        <thead data-page-node-id="tu6b1vbJkcVLQiXBz6gGM2"><tr data-page-node-id="BG7trXEAGtOqukyCxnFS4H"><th data-page-node-id="65BfG2qRixrVH9aYVsATAC" style="width:80px">层面</th><th data-page-node-id="gwOJUWkkNr28PjZiEqwYER">建议</th></tr></thead>
-        <tbody data-page-node-id="YKZXdA3szsBpTW9XYdPoAu">
-          <tr data-page-node-id="ZeyzGTXOjs3Fl9rmJzvxeY"><td data-page-node-id="BbL8P41McXz2XYB3BKacK5"><b data-page-node-id="3zly17NBKWsEvbhs4O0c2d">设计端</b></td><td data-page-node-id="AGRilCDYYP2Y0WihN0BQg4">把「链路中断」当作顶层工况而不是异常分支，验证全部关键决策可在无地面指令下完成</td></tr>
-          <tr data-page-node-id="U5msqJNUqURPrn4dIjGHnF"><td data-page-node-id="JbzstjnIiTESO6ywZNpGIO"><b data-page-node-id="33001Pm6xXe0AfOSZ29ewM">设计端</b></td><td data-page-node-id="KPXZXcQcyU2KKboGgMlWLJ">电源、链路、地面站做跨层共因分析，明确冗余度被打折后的残余能力</td></tr>
-          <tr data-page-node-id="lUdFwbQPNESIcYypRqERKo"><td data-page-node-id="P7ZtfYDbr17QYaNRqEZZdW"><b data-page-node-id="O5RBHBDMSUD6hynRB5Nmx8">运行端</b></td><td data-page-node-id="POz7dbKNFC8uupSDt8v6Jh">每条航线预先勘选备降点，并把可达性写进飞行计划与放行条件</td></tr>
-          <tr data-page-node-id="GQN6Po8C5va9YXeoIuLoGx"><td data-page-node-id="qdi4yvvU7zY10MSyuaMU1D"><b data-page-node-id="FiC1lKWHQiN8CODUSmm6Qa">运行端</b></td><td data-page-node-id="ha1sCP9v5273zDgwVGDmyT">地面站告警分级与接管权限做独立人因验证，避免一人多机时的告警淹没</td></tr>
-          <tr data-page-node-id="5T5B1P7sFsSSx3kPBEDynq"><td data-page-node-id="RJQyMVXZVand6i8sQARfZw"><b data-page-node-id="NkrTWa2MMmsBGLFsIO2w5L">组织端</b></td><td data-page-node-id="VNyE9ViuOLCZWSekjW6jwp">把值班、排班、维护、事件上报纳入同一个安全绩效闭环，防止流程性共因</td></tr>
-          <tr data-page-node-id="ZzVymoLPqGzPLhWVTaPsFq"><td data-page-node-id="jJ8yybypBcFdCAXahX4h50"><b data-page-node-id="nn5ARoTsXHXMsCdleBIevL">组织端</b></td><td data-page-node-id="TCVB3aNlpJCurdXCCubBCv">运行场景扩展（城区、夜航、复杂气象）时重新打开符合性矩阵，不沿用原结论</td></tr>
-          <tr data-page-node-id="TjLDMscduFNcAARY8fCaqE"><td data-page-node-id="48qAGbKNh11Gv3FKf5TCR8"><b data-page-node-id="77axDBML5G7EcTvPlkMzHc">规章端</b></td><td data-page-node-id="pyICW2U4Abh7rr6KBfhBUA">把「地面指挥中心」与「C2 链路」作为独立审定对象写进要求，而非视为附属设备</td></tr>
-          <tr data-page-node-id="f8n0BLQM1jtRpQyNSanKGh"><td data-page-node-id="SmC6KFpuVxD9pElFO8ZDyV"><b data-page-node-id="F9fxOCPj0h3GypqenOhHFd">公众端</b></td><td data-page-node-id="BFP1C05BWCwAMh8outnUjr">公开运行边界与实测噪声 / 事件数据，用可核对的信息替代零事故话术</td></tr>
+  <p class="lead">做完这一遍，我对「四证齐全」的理解变了。它不是终点，而是一张清单：设计、单机、生产、组织，各自被审过一遍。真正决定安全的，是这四段之间的接缝有没有人负责。</p>
+  <div class="cols">
+    <div>
+      <h3><span class="idx">07.1</span>分层的改进建议</h3>
+      <table>
+        <caption>表 07-1 · 八条建议</caption>
+        <thead><tr><th style="width:80px">层面</th><th>建议</th></tr></thead>
+        <tbody>
+          <tr><td><b>设计端</b></td><td>把「链路中断」当作顶层工况而不是异常分支，验证全部关键决策可在无地面指令下完成</td></tr>
+          <tr><td><b>设计端</b></td><td>电源、链路、地面站做跨层共因分析，明确冗余度被打折后的残余能力</td></tr>
+          <tr><td><b>运行端</b></td><td>每条航线预先勘选备降点，并把可达性写进飞行计划与放行条件</td></tr>
+          <tr><td><b>运行端</b></td><td>地面站告警分级与接管权限做独立人因验证，避免一人多机时的告警淹没</td></tr>
+          <tr><td><b>组织端</b></td><td>把值班、排班、维护、事件上报纳入同一个安全绩效闭环，防止流程性共因</td></tr>
+          <tr><td><b>组织端</b></td><td>运行场景扩展（城区、夜航、复杂气象）时重新打开符合性矩阵，不沿用原结论</td></tr>
+          <tr><td><b>规章端</b></td><td>把「地面指挥中心」与「C2 链路」作为独立审定对象写进要求，而非视为附属设备</td></tr>
+          <tr><td><b>公众端</b></td><td>公开运行边界与实测噪声 / 事件数据，用可核对的信息替代零事故话术</td></tr>
         </tbody>
       </table>
     </div>
-    <div data-page-node-id="XSHIifXTHrYccrCNbgmln4">
-      <h3 data-page-node-id="F8mCFTgpQeA5MYjAEvGymb"><span data-page-node-id="jPvXyLOQCP80DrVrQoLOx4" class="idx">07.2</span>回到我自己的专业</h3>
-      <p data-page-node-id="qb9jv2CHv1T7vdZ28SLlX4">这份分析对我最有用的地方，是让我看清「界面」的范围被放大了。以前做座舱，界面是仪表和门把手；现在做无人驾驶载客，界面还包括登机前的两分钟说明、地面监控屏的告警优先级、起降点的围栏和地面指示。</p>
-      <p data-page-node-id="ClyExJmAtaLhqAD7AgjCOg">这些东西不在飞机上，却直接决定乘客和第三方是否安全。<b data-page-node-id="p0PvhwROmT90NdgWRkdRoV">工程负责让失效不发生，设计负责让体系的边界被人看懂</b>——看不懂的边界，等于没有边界。</p>
-      <div data-page-node-id="slVKR4XurdXEfHdfJ0GAno" class="note"><span data-page-node-id="m8hBhcicYbRcecY3KKaP7w" class="lab">与作业一的关系</span>作业一得出的结论是「工业设计的主战场从座舱移到了体系」；这份安全分析从另一侧印证了同一件事：风险也从机体移到了体系。两条线在这一点上合拢。</div>
-      <div data-page-node-id="E6XkbBYYdMTeANkDVQ9A81" class="stamp" style="margin-top:14px">体系即冗余</div>
+    <div>
+      <h3><span class="idx">07.2</span>回到我自己的专业</h3>
+      <p>这份分析对我最有用的地方，是让我看清「界面」的范围被放大了。以前做座舱，界面是仪表和门把手；现在做无人驾驶载客，界面还包括登机前的两分钟说明、地面监控屏的告警优先级、起降点的围栏和地面指示。</p>
+      <p>这些东西不在飞机上，却直接决定乘客和第三方是否安全。<b>工程负责让失效不发生，设计负责让体系的边界被人看懂</b>——看不懂的边界，等于没有边界。</p>
+      <div class="note"><span class="lab">与作业一的关系</span>作业一得出的结论是「工业设计的主战场从座舱移到了体系」；这份安全分析从另一侧印证了同一件事：风险也从机体移到了体系。两条线在这一点上合拢。</div>
+      <div class="stamp" style="margin-top:14px">体系即冗余</div>
     </div>
   </div>
 
-</section><h3 data-page-node-id="V2G9lFRWx2MaMkM9iRDDk1"><span data-page-node-id="MJZRnVRimUCKEvhfV5BHhx" class="idx">REF</span>主要参考来源</h3><ol data-page-node-id="AEX7OsIqdAE80QHXWJhmmZ" class="refs"><li data-page-node-id="gkWEjaAbChBerk0pPIysXV">亿航智能官网：EH216-S 产品页（尺寸、最大起飞重量、航程、速度、动力构型与全备份说明）</li><li data-page-node-id="2HHSmHVHU8CEQZnuF89J3Z">亿航智能官网：《适航审定历程》（2020-12 申请 → 2025-03 OC，审定工作量数据）</li><li data-page-node-id="tg4FBc0y07QMnUV69hEv3H">中国民用航空局 / 中国民航报：《从 0 到 1，中国方案让「空中的士」飞向未来》，EH216-S 专用条件与 TC 审定</li><li data-page-node-id="Er294YYT43fsswei0ytdlG">《EH216-S 型无人驾驶航空器系统专用条件》，中国民航局，2022-02</li><li data-page-node-id="u88zbpcHIwTkdd5afZnLDI">广东省人民政府门户网站：《全国首台警用载人无人机在广州入列》，2026-01</li><li data-page-node-id="jM19PWYyQcLMLKwjJS3uDN">中华工商网：《亿航智能：让低空经济走近千家万户》，OC 与商业化运营，2025-06</li><li data-page-node-id="YBHF52pLiTTW4Pmt3702w2">公开报道：西藏林芝高海拔文旅飞行、武汉东湖低空观光、巴西试验飞行许可、墨西哥特殊适航证</li><li data-page-node-id="XcTBrpdN5Fly6Iku5ulkkq">JARUS SORA 2.0 / 2.5，Specific Operations Risk Assessment（特定运行风险评估方法）</li><li data-page-node-id="vgHkB1ZlFqQ2qHDrVNiriX">N. Leveson, Engineering a Safer World（系统安全理论，用于「责任边界」讨论）</li></ol><footer data-page-node-id="NcfNQreAWPVisZQCUKXZDl">
-  
+</section><h3><span class="idx">REF</span>主要参考来源</h3><ol class="refs"><li>亿航智能官网：EH216-S 产品页（尺寸、最大起飞重量、航程、速度、动力构型与全备份说明）</li><li>亿航智能官网：《适航审定历程》（2020-12 申请 → 2025-03 OC，审定工作量数据）</li><li>中国民用航空局 / 中国民航报：《从 0 到 1，中国方案让「空中的士」飞向未来》，EH216-S 专用条件与 TC 审定</li><li>《EH216-S 型无人驾驶航空器系统专用条件》，中国民航局，2022-02</li><li>广东省人民政府门户网站：《全国首台警用载人无人机在广州入列》，2026-01</li><li>中华工商网：《亿航智能：让低空经济走近千家万户》，OC 与商业化运营，2025-06</li><li>公开报道：西藏林芝高海拔文旅飞行、武汉东湖低空观光、巴西试验飞行许可、墨西哥特殊适航证</li><li>JARUS SORA 2.0 / 2.5，Specific Operations Risk Assessment（特定运行风险评估方法）</li><li>《民用无人驾驶航空器运行安全管理规定》及 CCAR-21-R4 相关符合性方法（MC0–MC9）</li><li>N. Leveson, Engineering a Safer World（系统安全理论，用于「责任边界」讨论）</li></ol><footer>
+  <div class="f2">
+    <div><h5>REVISION RECORD / 修订记录</h5>
+      <table class="rev"><thead><tr><th>REV</th><th>DATE</th><th>DESCRIPTION</th><th>DRAWN</th></tr></thead>
+      <tbody><tr><td>A</td><td>2026-11-24</td><td>首次提交 · 作业二：EH216-S 全方位安全分析</td><td>李振宁</td></tr></tbody></table>
+      <h5 style="margin-top:16px">SUBMISSION / 提交信息</h5>
+      <div class="sigline">姓名：李振宁<br>学号：15231012<br>专业：工业设计 · 2023 级<br>课程：飞行汽车技术基础 · 2026 秋<br>提交形式：Web 页面（GitHub Pages）</div>
+    </div>
+    <div><h5>NOTES / 图幅备注</h5>
+      <div class="sigline">图号：JLU-UAM-02<br>单位：mm / kg / km / min<br>投影：第一角法（示意）<br>公差：未注尺寸仅供参考<br>本图纸为非工程图，按公开资料示意绘制</div>
+      <div class="seals" style="margin-top:14px">
+        <div class="seal">DRAWN BY<b>李振宁</b></div><div class="seal">STUDENT ID<b>15231012</b></div>
+        <div class="seal">CHECKED<b>SELF</b></div>
+      </div>
+      <div class="stamp" style="margin-top:16px">仅供课程作业使用</div>
+    </div>
+  </div>
 </footer></main></div>
-<script data-page-node-id="CRFuLKH6AwBBxtPRTz91g7" data-pnid-children="xZVFlaz8ymX0CtilfHF4L4">
+<script>
 (function(){
   var links=[].slice.call(document.querySelectorAll('.rail a'));
   var secs=[].slice.call(document.querySelectorAll('.sheet[id]'));
@@ -385,5 +400,4 @@ footer h5{font:700 11px var(--mono);letter-spacing:.14em;color:var(--ink2);margi
   document.querySelector('#soraTabs button').click();
 })();
 </script>
-
 </body></html>
